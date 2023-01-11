@@ -7,8 +7,9 @@ const Splash = () => {
   return (
     <div className="splash">
       <img className="title" src={Title} />
-      {/* <div className="start-button">START</div> */}
-      <Link className="start-button">START</Link>
+      <Link to="/home" className="start-button">
+        START
+      </Link>
     </div>
   );
 };
