@@ -15,7 +15,6 @@
   align-items: center;
   font-size: 2vw;
   padding: 0.5%;
-  position: relative;
   background: center no-repeat url("/src/Assets/Button.png");
   background-size: contain;
   height: 11vh;
