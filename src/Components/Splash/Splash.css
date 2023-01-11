@@ -1,0 +1,10 @@
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  height: 80vh;
+  width: auto;
+}
