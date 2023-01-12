@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState, useTransition } from "react";
 import NavBar from "../NavBar/NavBar";
 import "./Quiz.css";
-import QuizTitle from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/quiz.png";
+import Form from "../Form/Form";
 
 const Quiz = () => {
   return (
     <div>
       <NavBar />
-      <img className="quizTitle" src={QuizTitle} />
-      <form></form>
+      <Form />
     </div>
   );
 };

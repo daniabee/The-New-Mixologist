@@ -1,0 +1,69 @@
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.quizTitle {
+  width: 80vw;
+  height: auto;
+}
+
+.quizForm {
+  background-color: rgba(0, 0, 0, 0.607);
+  box-shadow: 0 0 0.5rem #ff00a69f, 0 0 2rem #5b18f8b4;
+  width: 55vw;
+  padding: 1%;
+  margin-bottom: 5%;
+}
+
+.optionsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5%;
+}
+
+.quizLabel {
+  text-align: left;
+  font-size: 2vw;
+  margin: 1%;
+  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
+    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  color: white;
+}
+
+.option {
+  height: 12vh;
+  width: auto;
+}
+
+.horiscope {
+  height: 25vh;
+  width: auto;
+  margin: 10%;
+  border: 0.03rem solid #ff00a7;
+  border-radius: 0.1rem;
+}
+
+.selected {
+  border: 0.05rem solid yellow;
+  box-shadow: 0 0 0.2rem #ff00a7, 0 0 0.5rem #5b18f8;
+}
+
+.submit-button {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center / contain no-repeat url("/src/Assets/Button.png");
+  height: 8vh;
+  width: 12vw;
+  font-size: 2vw;
+  font-weight: 600;
+  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
+    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+}

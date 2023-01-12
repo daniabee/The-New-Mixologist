@@ -4,6 +4,7 @@ import Splash from "../Splash/Splash";
 import Home from "../Home/Home";
 import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
+import { useEffect } from "react";
 
 function App() {
   return (
