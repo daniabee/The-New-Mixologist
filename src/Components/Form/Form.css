@@ -13,7 +13,7 @@
 
 .quizForm {
   background-color: rgba(0, 0, 0, 0.607);
-  box-shadow: 0 0 0.5rem #ff00a69f, 0 0 2rem #5b18f8b4;
+  box-shadow: 0 0 0.5rem #ff00a69f, 0 0 2rem #5b18f870;
   width: 55vw;
   padding: 1%;
   margin-bottom: 5%;
@@ -49,7 +49,6 @@
 
 .selected {
   border: 0.05rem solid yellow;
-  box-shadow: 0 0 0.2rem #ff00a7, 0 0 0.5rem #5b18f8;
 }
 
 .submit-button {

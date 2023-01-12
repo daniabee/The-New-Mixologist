@@ -21,8 +21,9 @@ import Sagittarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets
 import Capricorn from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Capricorn.png";
 import Aquarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Aquarius.png";
 import Pisces from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Pisces.png";
+import { Link } from "react-router-dom";
 
-const Form = () => {
+const Form = ({ setMyDrink }) => {
   const [question1, setQuestion1] = useState("");
   const [question2, setQuestion2] = useState("");
   const [question3, setQuestion3] = useState("");
@@ -30,8 +31,6 @@ const Form = () => {
   const [selected1, setSelected1] = useState(0);
   const [selected2, setSelected2] = useState(0);
   const [selected3, setSelected3] = useState(0);
-
-  const [drinks, setDrinks] = [];
 
   const firstQuestionClick = (event) => {
     event.preventDefault();
@@ -65,7 +64,7 @@ const Form = () => {
 
   const thirdQuestionClick = (event) => {
     event.preventDefault();
-    setQuestion3(event.target.name);
+    setQuestion3(event.target.id);
     setSelected3(0);
     if (event.target.id == 9) {
       setSelected3(9);
@@ -95,9 +94,6 @@ const Form = () => {
   };
 
   const submitForm = () => {
-    console.log(question1);
-    console.log(question2);
-    console.log(question3);
     getCocktailInfo();
     clearForm();
   };
@@ -111,17 +107,28 @@ const Form = () => {
     setSelected3(0);
   };
 
-  const getCocktailInfo = async () => {
-    const glassResponse = await fetch(
-      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?g=${question1}`
+  const pickDrink = (arr) => {
+    let newDrink = {};
+    const newDrinks = arr.filter((item) =>
+      item.idDrink.includes(`${question3}`)
     );
-    const glass = await glassResponse.json();
+    const index = Math.floor(Math.random() * newDrinks.length);
+    newDrink = [arr[index]];
+    if (!newDrink) {
+      const ind = Math.floor(Math.random() * arr.length);
+      newDrink = arr[ind];
+    }
+    setMyDrink(newDrink);
+  };
+
+  const getCocktailInfo = async () => {
+    let allDrinks = [];
     const ingredientResponse = await fetch(
       `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${question2}`
     );
     const ingredient = await ingredientResponse.json();
-    const drinks = glass.drinks.concat(ingredient.drinks);
-    setDrinks(drinks);
+    allDrinks = ingredient.drinks;
+    pickDrink(allDrinks);
   };
 
   return (
@@ -320,6 +327,7 @@ const Form = () => {
         </div>
       </form>
       <div
+        to="/result"
         className="submit-button"
         onClick={() => {
           submitForm();

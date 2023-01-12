@@ -15,7 +15,9 @@
 .drinkImg {
   height: auto;
   width: 25vw;
-  border: 0.1rem solid white;
+  border: 0.02rem solid #ffffff;
+  box-shadow: 0 0 0.125rem #ffff, 0 0 0.75rem #ff00a6;
+  margin: 2%;
 }
 
 .randomButton {
