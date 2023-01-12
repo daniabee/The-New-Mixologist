@@ -10,7 +10,6 @@ const RandomDrink = () => {
       "http://www.thecocktaildb.com/api/json/v1/1/random.php"
     );
     const random = await response.json();
-    console.log(random.drinks[0]);
     setRandomDrink(random.drinks[0]);
   };
 
