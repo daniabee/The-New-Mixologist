@@ -5,8 +5,12 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <div className="navBar">
-      <NavLink className="navLink">WHAT'S MY DRINK?</NavLink>
-      <NavLink className="navLink">RANDOM COCKTAIL</NavLink>
+      <NavLink to="/whats-my-drink" className="navLink">
+        WHAT'S MY DRINK?
+      </NavLink>
+      <NavLink to="/random-drink" className="navLink">
+        RANDOM COCKTAIL
+      </NavLink>
     </div>
   );
 };
