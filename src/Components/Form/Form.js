@@ -118,17 +118,16 @@ const Form = ({ setMyDrink }) => {
       const ind = Math.floor(Math.random() * arr.length);
       newDrink = arr[ind];
     }
-    setMyDrink(newDrink);
+    console.log(newDrink[0]);
+    setMyDrink(newDrink[0]);
   };
 
   const getCocktailInfo = async () => {
-    let allDrinks = [];
     const ingredientResponse = await fetch(
       `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${question2}`
     );
     const ingredient = await ingredientResponse.json();
-    allDrinks = ingredient.drinks;
-    pickDrink(allDrinks);
+    pickDrink(ingredient.drinks);
   };
 
   return (
@@ -326,7 +325,7 @@ const Form = ({ setMyDrink }) => {
           </label>
         </div>
       </form>
-      <div
+      <Link
         to="/result"
         className="submit-button"
         onClick={() => {
@@ -334,7 +333,7 @@ const Form = ({ setMyDrink }) => {
         }}
       >
         SUBMIT
-      </div>
+      </Link>
     </div>
   );
 };
