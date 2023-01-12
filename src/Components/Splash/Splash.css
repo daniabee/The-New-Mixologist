@@ -1,0 +1,26 @@
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  height: 80vh;
+  width: auto;
+}
+
+.start-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center / contain no-repeat url("/src/Assets/Button.png");
+  height: 8vh;
+  width: 12vw;
+  font-size: 2vw;
+  font-weight: 600;
+  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
+    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+}

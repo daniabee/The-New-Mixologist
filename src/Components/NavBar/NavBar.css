@@ -1,0 +1,29 @@
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("/src/Assets/NavBar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 18vh;
+}
+
+.navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  padding: 0.5%;
+  background: center no-repeat url("/src/Assets/Button.png");
+  background-size: contain;
+  height: 11vh;
+  width: 25vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
+    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}

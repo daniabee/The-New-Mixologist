@@ -1,0 +1,39 @@
+.drinkThumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drinkName {
+  font-size: 2vw;
+  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
+    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  color: white;
+}
+
+.drinkImg {
+  height: auto;
+  width: 25vw;
+  border: 0.1rem solid white;
+}
+
+.randomButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center / contain no-repeat url("/src/Assets/Button.png");
+  height: 8vh;
+  width: 12vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
+    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+  margin: 1%;
+}
+
+.randomButton:hover {
+  cursor: pointer;
+}
