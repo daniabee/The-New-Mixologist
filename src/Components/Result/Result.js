@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../App/AppContext";
 import { Link } from "react-router-dom";
 import "./Result.css";
 
-const Result = ({ myDrink }) => {
+const Result = () => {
+  const [state, dispatch] = useContext(AppContext);
+
   return (
     <div className="result">
       <Link to="/home" className="back-button">
         BACK
       </Link>
       <div className="drinkThumbnail">
-        <h1 className="drinkName">{myDrink.strDrink}</h1>
-        <img className="drinkImg" src={myDrink.strDrinkThumb} />
+        <h1 className="drinkName">{state.myDrink.strDrink}</h1>
+        <img className="drinkImg" src={state.myDrink.strDrinkThumb} />
       </div>
     </div>
   );

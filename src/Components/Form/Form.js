@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Form.css";
+import AppContext from "../App/AppContext";
 import QuizTitle from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/quiz.png";
 import Cocktailglass from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/cocktailglass.png";
 import Highballglass from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/highball-collins.png";
@@ -23,74 +24,28 @@ import Aquarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Aq
 import Pisces from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Pisces.png";
 import { Link } from "react-router-dom";
 
-const Form = ({ setMyDrink }) => {
-  const [question1, setQuestion1] = useState("");
-  const [question2, setQuestion2] = useState("");
-  const [question3, setQuestion3] = useState("");
-
-  const [selected1, setSelected1] = useState(0);
-  const [selected2, setSelected2] = useState(0);
-  const [selected3, setSelected3] = useState(0);
+const Form = () => {
+  const [state, dispatch] = useContext(AppContext);
 
   const firstQuestionClick = (event) => {
     event.preventDefault();
-    setQuestion1(event.target.name);
-    setSelected1(0);
-    if (event.target.id == 1) {
-      setSelected1(1);
-    } else if (event.target.id == 2) {
-      setSelected1(2);
-    } else if (event.target.id == 3) {
-      setSelected1(3);
-    } else if (event.target.id == 4) {
-      setSelected1(4);
-    }
+    dispatch({ type: "QUESTION_ONE", question: event.target.id });
+    dispatch({ type: "SELECTED_ONE", selected: 0 });
+    dispatch({ type: "SELECTED_ONE", selected: event.target.id });
   };
 
   const secondQuestionClick = (event) => {
     event.preventDefault();
-    setQuestion2(event.target.name);
-    setSelected2(0);
-    if (event.target.id == 5) {
-      setSelected2(5);
-    } else if (event.target.id == 6) {
-      setSelected2(6);
-    } else if (event.target.id == 7) {
-      setSelected2(7);
-    } else if (event.target.id == 8) {
-      setSelected2(8);
-    }
+    dispatch({ type: "QUESTION_TWO", question: event.target.name });
+    dispatch({ type: "SELECTED_TWO", selected: 0 });
+    dispatch({ type: "SELECTED_TWO", selected: event.target.id });
   };
 
   const thirdQuestionClick = (event) => {
     event.preventDefault();
-    setQuestion3(event.target.id);
-    setSelected3(0);
-    if (event.target.id == 9) {
-      setSelected3(9);
-    } else if (event.target.id == 10) {
-      setSelected3(10);
-    } else if (event.target.id == 11) {
-      setSelected3(11);
-    } else if (event.target.id == 12) {
-      setSelected3(12);
-    } else if (event.target.id == 13) {
-      setSelected3(13);
-    } else if (event.target.id == 14) {
-      setSelected3(14);
-    } else if (event.target.id == 15) {
-      setSelected3(15);
-    } else if (event.target.id == 16) {
-      setSelected3(16);
-    } else if (event.target.id == 17) {
-      setSelected3(17);
-    } else if (event.target.id == 18) {
-      setSelected3(18);
-    } else if (event.target.id == 19) {
-      setSelected3(19);
-    } else if (event.target.id == 20) {
-      setSelected3(20);
-    }
+    dispatch({ type: "QUESTION_THREE", question: event.target.id });
+    dispatch({ type: "SELECTED_THREE", selected: 0 });
+    dispatch({ type: "SELECTED_THREE", selected: event.target.id });
   };
 
   const submitForm = () => {
@@ -99,34 +54,37 @@ const Form = ({ setMyDrink }) => {
   };
 
   const clearForm = () => {
-    setQuestion1("");
-    setQuestion2("");
-    setQuestion3("");
-    setSelected1(0);
-    setSelected2(0);
-    setSelected3(0);
+    dispatch({ type: "QUESTION_ONE", question: 0 });
+    dispatch({ type: "QUESTION_TWO", question: "" });
+    dispatch({ type: "QUESTION_THREE", question: 0 });
+    dispatch({ type: "SELECTED_ONE", selected: 0 });
+    dispatch({ type: "SELECTED_TWO", selected: 0 });
+    dispatch({ type: "SELECTED_THREE", selected: 0 });
   };
 
   const pickDrink = (arr) => {
     let newDrink = {};
     const newDrinks = arr.filter((item) =>
-      item.idDrink.includes(`${question3}`)
+      item.idDrink.includes(`${state.question3}`)
     );
+    if (!newDrink) {
+      newDrinks = arr.filter((item) =>
+        item.idDrink.includes(`${state.question1}`)
+      );
+    }
     const index = Math.floor(Math.random() * newDrinks.length);
     newDrink = [arr[index]];
-    if (!newDrink) {
-      const ind = Math.floor(Math.random() * arr.length);
-      newDrink = arr[ind];
-    }
-    setMyDrink(newDrink[0]);
+    return newDrink[0];
   };
 
   const getCocktailInfo = async () => {
+    console.log(state.question2);
     const ingredientResponse = await fetch(
-      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${question2}`
+      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.question2}`
     );
     const ingredient = await ingredientResponse.json();
-    pickDrink(ingredient.drinks);
+    const newDrink = pickDrink(ingredient.drinks);
+    dispatch({ type: "MY_DRINK", drink: newDrink });
   };
 
   return (
@@ -142,7 +100,7 @@ const Form = ({ setMyDrink }) => {
             }}
           >
             <input
-              className={selected1 === 1 ? "selected option" : "option"}
+              className={state.selected1 == 1 ? "selected option" : "option"}
               type="image"
               id={1}
               name="Cocktail_glass"
@@ -150,7 +108,7 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected1 === 2 ? "selected option" : "option"}
+              className={state.selected1 == 2 ? "selected option" : "option"}
               type="image"
               id={2}
               name="Highball_glass"
@@ -158,7 +116,7 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected1 === 3 ? "selected option" : "option"}
+              className={state.selected1 == 3 ? "selected option" : "option"}
               type="image"
               id={3}
               name="Martini_glass"
@@ -166,7 +124,7 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected1 === 4 ? "selected option" : "option"}
+              className={state.selected1 == 4 ? "selected option" : "option"}
               type="image"
               id={4}
               name="Whiskey_glass"
@@ -184,7 +142,7 @@ const Form = ({ setMyDrink }) => {
             }}
           >
             <input
-              className={selected2 === 5 ? "selected option" : "option"}
+              className={state.selected2 == 5 ? "selected option" : "option"}
               type="image"
               id={5}
               name="Coffee"
@@ -192,7 +150,7 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected2 === 6 ? "selected option" : "option"}
+              className={state.selected2 == 6 ? "selected option" : "option"}
               type="image"
               id={6}
               name="Lime"
@@ -200,7 +158,7 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected2 === 7 ? "selected option" : "option"}
+              className={state.selected2 == 7 ? "selected option" : "option"}
               type="image"
               id={7}
               name="Strawberries"
@@ -208,7 +166,7 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected2 === 8 ? "selected option" : "option"}
+              className={state.selected2 == 8 ? "selected option" : "option"}
               type="image"
               id={8}
               name="Tomato_juice"
@@ -226,7 +184,9 @@ const Form = ({ setMyDrink }) => {
             }}
           >
             <input
-              className={selected3 === 9 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 9 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={9}
               name="Aries"
@@ -234,7 +194,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 10 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 10 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={10}
               name="Taurus"
@@ -242,7 +204,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 11 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 11 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={11}
               name="Gemini"
@@ -250,7 +214,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 12 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 12 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={12}
               name="Cancer"
@@ -258,7 +224,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 13 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 13 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={13}
               name="Leo"
@@ -266,7 +234,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 14 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 14 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={14}
               name="Virgo"
@@ -274,7 +244,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 15 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 15 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={15}
               name="Libra"
@@ -282,7 +254,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 16 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 16 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={16}
               name="Scorpio"
@@ -290,7 +264,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 17 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 17 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={17}
               name="Sagittarius"
@@ -298,7 +274,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 18 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 18 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={18}
               name="Capricorn"
@@ -306,7 +284,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 19 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 19 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={19}
               name="Aquarius"
@@ -314,7 +294,9 @@ const Form = ({ setMyDrink }) => {
               tabIndex={1}
             />
             <input
-              className={selected3 === 20 ? "selected horiscope" : "horiscope"}
+              className={
+                state.selected3 == 20 ? "selected horiscope" : "horiscope"
+              }
               type="image"
               id={20}
               name="Pisces"
