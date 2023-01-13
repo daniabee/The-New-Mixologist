@@ -14,6 +14,10 @@ const initialState = {
     strDrink: "Complete the quiz to see your drink!",
     strDrinkThumb: Logo,
   },
+  randomDrink: {
+    strDrink: "Click the button to get a drink!",
+    strDrinkThumb: Logo,
+  },
   question1: "",
   question2: "",
   question3: "",
@@ -39,6 +43,8 @@ const reducer = (state, action) => {
       return { ...state, selected2: action.selected };
     case "SELECTED_THREE":
       return { ...state, selected3: action.selected };
+    case "RANDOM_DRINK":
+      return { ...state, randomDrink: action.randomDrink };
     default:
       return state;
   }
