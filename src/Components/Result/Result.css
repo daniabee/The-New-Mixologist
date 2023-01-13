@@ -1,16 +1,11 @@
-.splash {
+.drinkThumbnail {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-
-.title {
   height: 80vh;
-  width: auto;
 }
 
-.start-button {
+.back-button {
   display: flex;
   justify-content: center;
   align-items: center;
