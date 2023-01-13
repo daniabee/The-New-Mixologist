@@ -24,7 +24,7 @@ const RandomDrink = () => {
         <h1 className="drinkName">{randomDrink.strDrink}</h1>
         <img className="drinkImg" src={randomDrink.strDrinkThumb} />
         <div className="randomButton" onClick={getRandomDrink}>
-          RANDOM
+          NEW DRINK
         </div>
       </div>
     </div>

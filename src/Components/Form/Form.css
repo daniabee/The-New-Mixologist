@@ -29,8 +29,8 @@
   text-align: left;
   font-size: 2vw;
   margin: 1%;
-  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
-    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
+    0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
   color: white;
 }
 
@@ -61,8 +61,8 @@
   width: 12vw;
   font-size: 2vw;
   font-weight: 600;
-  text-shadow: -0.02rem 0.02rem 0 #ff00a7, 0.02rem 0.02rem 0 #ff00a7,
-    0.02rem -0.02rem 0 #ff00a7, -0.02rem -0.02rem 0 #ff00a7;
+  text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
+    0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
   color: white;
   text-decoration: none;
 }

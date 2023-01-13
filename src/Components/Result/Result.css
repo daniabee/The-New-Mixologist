@@ -1,0 +1,22 @@
+.drinkThumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center / contain no-repeat url("/src/Assets/Button.png");
+  height: 8vh;
+  width: 12vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
+    0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+  margin: 1%;
+}

@@ -6,9 +6,13 @@ import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
 import { useEffect, useState } from "react";
+import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 function App() {
-  const [myDrink, setMyDrink] = useState({});
+  const [myDrink, setMyDrink] = useState({
+    strDrink: "Take our quiz to see your drink!",
+    strDrinkThumb: Logo,
+  });
 
   return (
     <div className="App">

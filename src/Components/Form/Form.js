@@ -118,7 +118,6 @@ const Form = ({ setMyDrink }) => {
       const ind = Math.floor(Math.random() * arr.length);
       newDrink = arr[ind];
     }
-    console.log(newDrink[0]);
     setMyDrink(newDrink[0]);
   };
 
