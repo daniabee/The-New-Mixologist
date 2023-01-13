@@ -22,7 +22,9 @@ import Sagittarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets
 import Capricorn from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Capricorn.png";
 import Aquarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Aquarius.png";
 import Pisces from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Pisces.png";
+import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 import { Link } from "react-router-dom";
+import { getCocktailInfo } from "../../apiCalls";
 
 const Form = () => {
   const [state, dispatch] = useContext(AppContext);
@@ -48,9 +50,27 @@ const Form = () => {
     dispatch({ type: "SELECTED_THREE", selected: event.target.id });
   };
 
-  const submitForm = () => {
-    getCocktailInfo();
-    clearForm();
+  const pickDrink = (arr) => {
+    const newDrinks = arr.filter((item) =>
+      item.idDrink.includes(`${state.question1}`)
+    );
+    const index = Math.floor(Math.random() * newDrinks.length);
+    const drink = [arr[index]][0];
+    return drink;
+  };
+
+  const setCocktailInfo = async () => {
+    const drinks = await getCocktailInfo(state.question2);
+    if (drinks === "Error") {
+      const errorDrink = {
+        strDrink: "There was a problem on our end!",
+        strDrinkThumb: Logo,
+      };
+      dispatch({ type: "MY_DRINK", drink: errorDrink });
+    } else {
+      const newDrink = pickDrink(drinks);
+      dispatch({ type: "MY_DRINK", drink: newDrink });
+    }
   };
 
   const clearForm = () => {
@@ -62,29 +82,9 @@ const Form = () => {
     dispatch({ type: "SELECTED_THREE", selected: 0 });
   };
 
-  const pickDrink = (arr) => {
-    let newDrink = {};
-    const newDrinks = arr.filter((item) =>
-      item.idDrink.includes(`${state.question3}`)
-    );
-    if (!newDrink) {
-      newDrinks = arr.filter((item) =>
-        item.idDrink.includes(`${state.question1}`)
-      );
-    }
-    const index = Math.floor(Math.random() * newDrinks.length);
-    newDrink = [arr[index]];
-    return newDrink[0];
-  };
-
-  const getCocktailInfo = async () => {
-    console.log(state.question2);
-    const ingredientResponse = await fetch(
-      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.question2}`
-    );
-    const ingredient = await ingredientResponse.json();
-    const newDrink = pickDrink(ingredient.drinks);
-    dispatch({ type: "MY_DRINK", drink: newDrink });
+  const submitForm = () => {
+    setCocktailInfo();
+    clearForm();
   };
 
   return (

@@ -8,7 +8,7 @@ const Result = () => {
 
   return (
     <div className="result">
-      <Link to="/home" className="back-button">
+      <Link to="/whats-my-drink" className="back-button">
         BACK
       </Link>
       <div className="drinkThumbnail">
