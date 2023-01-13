@@ -51,14 +51,9 @@ const Form = () => {
   };
 
   const pickDrink = (arr) => {
-    let newDrinks = arr.filter((item) =>
-      item.idDrink.includes(`${state.question3}`)
+    const newDrinks = arr.filter((item) =>
+      item.idDrink.includes(`${state.question1}`)
     );
-    if (!newDrinks) {
-      newDrinks = arr.filter((item) =>
-        item.idDrink.includes(`${state.question1}`)
-      );
-    }
     const index = Math.floor(Math.random() * newDrinks.length);
     const drink = [arr[index]][0];
     return drink;
