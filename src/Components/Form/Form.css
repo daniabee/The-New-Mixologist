@@ -7,14 +7,14 @@
 }
 
 .quizTitle {
-  width: 80vw;
+  width: 85vw;
   height: auto;
 }
 
 .quizForm {
   background-color: rgba(0, 0, 0, 0.607);
   box-shadow: 0 0 0.5rem #ff00a69f, 0 0 2rem #5b18f870;
-  width: 55vw;
+  width: 60vw;
   padding: 1%;
   margin-bottom: 5%;
 }
@@ -35,6 +35,7 @@
 }
 
 .option {
+  margin: 1%;
   height: 12vh;
   width: auto;
 }
@@ -48,22 +49,22 @@
 }
 
 .selected {
-  border: 0.05rem solid yellow;
-  box-shadow: 0 0 0.2rem yellow;
+  border: 0.25rem solid yellow;
+  box-shadow: 0 0 0.5rem yellow;
 }
 
 .submit-button {
-  justify-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   background: center / contain no-repeat url("/src/Assets/Button.png");
   height: 8vh;
   width: 12vw;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 600;
   text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
     0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
   color: white;
   text-decoration: none;
+  margin: 1%;
 }
