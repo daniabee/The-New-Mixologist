@@ -10,7 +10,7 @@ import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.p
 
 function App() {
   const [myDrink, setMyDrink] = useState({
-    strDrink: "Take our quiz to see your drink!",
+    strDrink: "Complete the quiz to see your drink!",
     strDrinkThumb: Logo,
   });
 
