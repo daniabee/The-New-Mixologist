@@ -49,6 +49,7 @@
 
 .selected {
   border: 0.05rem solid yellow;
+  box-shadow: 0 0 0.2rem yellow;
 }
 
 .submit-button {

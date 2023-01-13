@@ -5,6 +5,9 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <div className="navBar">
+      <NavLink to="/home" className="navLink">
+        HOME
+      </NavLink>
       <NavLink to="/whats-my-drink" className="navLink">
         WHAT'S MY DRINK?
       </NavLink>
