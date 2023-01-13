@@ -3,6 +3,7 @@ import "./Home.css";
 import NavBar from "../NavBar/NavBar";
 import Question from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Question.png";
 import Search from "../Search/Search";
+import AllDrinks from "../AllDrinks.js/AllDrinks";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <div className="search">
         <Search />
       </div>
+      <AllDrinks />
     </div>
   );
 };

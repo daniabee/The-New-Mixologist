@@ -8,7 +8,7 @@
   background-position-x: center;
   width: 100vw;
   height: 18vh;
-  position: relative;
+  position: sticky;
 }
 
 .navLink {

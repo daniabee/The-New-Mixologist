@@ -1,0 +1,27 @@
+.drinkThumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 20vw;
+  margin: 2%;
+}
+
+.drinkTitle {
+  color: white;
+  font-size: 1vw;
+  margin: 5%;
+}
+
+.imageCont {
+  height: 20vh;
+}
+
+.allDrinkImg {
+  height: 100%;
+  width: auto;
+  border: 0.02rem solid #ffffff;
+  box-shadow: 0 0 0.125rem #ffff, 0 0 0.75rem #ff00a6;
+  margin: 2%;
+}

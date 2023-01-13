@@ -30,13 +30,17 @@ export const getRandomDrink = async () => {
 };
 
 export const getAllDrinks = async (filter) => {
-  let URL;
-  if (filter === "Alcoholic" || filter === "Non_Alcoholic") {
-    URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${filter}`;
-  } else {
-    URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filter}`;
+  try {
+    let URL;
+    if (filter === "Alcoholic" || filter === "Non_Alcoholic") {
+      URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${filter}`;
+    } else {
+      URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filter}`;
+    }
+    const response = await fetch(URL);
+    const allDrinks = await response.json();
+    return allDrinks;
+  } catch {
+    return "Error";
   }
-  const response = await fetch(URL);
-  const allDrinks = await response.json();
-  return allDrinks;
 };

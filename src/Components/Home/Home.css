@@ -1,12 +1,14 @@
-.question {
-  height: 20%;
-  width: 8%;
-}
-
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
+  margin: 1%;
+}
+
+.question {
+  height: 20%;
+  width: 8%;
 }
 
 .search {

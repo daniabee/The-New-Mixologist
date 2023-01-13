@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="navBar">
       <NavLink to="/home" className="navLink">
-        HOME
+        FILTER COCKTAILS
       </NavLink>
       <NavLink to="/whats-my-drink" className="navLink">
         WHAT'S MY DRINK?

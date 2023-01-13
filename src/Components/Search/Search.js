@@ -9,7 +9,8 @@ const Search = () => {
   const submitFilter = async (event) => {
     event.preventDefault();
     const drinks = await getAllDrinks(state.filter);
-    dispatch({ type: "ALL_DRINKS", allDrinks: drinks });
+    dispatch({ type: "ALL_DRINKS", allDrinks: drinks.drinks });
+    console.log(state.allDrinks);
   };
 
   return (
