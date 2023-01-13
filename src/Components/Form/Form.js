@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./Form.css";
 import AppContext from "../App/AppContext";
 import QuizTitle from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/quiz.png";

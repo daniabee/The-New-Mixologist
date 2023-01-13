@@ -10,6 +10,8 @@ import { useReducer } from "react";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 const initialState = {
+  filter: "Alcoholic",
+  allDrinks: [],
   myDrink: {
     strDrink: "Complete the quiz to see your drink!",
     strDrinkThumb: Logo,
@@ -45,6 +47,10 @@ const reducer = (state, action) => {
       return { ...state, selected3: action.selected };
     case "RANDOM_DRINK":
       return { ...state, randomDrink: action.randomDrink };
+    case "FILTER_DRINKS":
+      return { ...state, filter: action.filter };
+    case "ALL_DRINKS":
+      return { ...state, allDrinks: action.allDrinks };
     default:
       return state;
   }

@@ -1,3 +1,4 @@
+import { getActiveElement } from "@testing-library/user-event/dist/utils";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 export const getCocktailInfo = async (ingredient) => {
@@ -26,4 +27,16 @@ export const getRandomDrink = async () => {
     };
     return random;
   }
+};
+
+export const getAllDrinks = async (filter) => {
+  let URL;
+  if (filter === "Alcoholic" || filter === "Non_Alcoholic") {
+    URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${filter}`;
+  } else {
+    URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filter}`;
+  }
+  const response = await fetch(URL);
+  const allDrinks = await response.json();
+  return allDrinks;
 };

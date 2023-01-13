@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Search.css";
+import AppContext from "../App/AppContext";
+import { getAllDrinks } from "../../apiCalls";
 
 const Search = () => {
+  const [state, dispatch] = useContext(AppContext);
+
+  const submitFilter = async (event) => {
+    event.preventDefault();
+    const drinks = await getAllDrinks(state.filter);
+    dispatch({ type: "ALL_DRINKS", allDrinks: drinks });
+  };
+
   return (
-    <form className="filter" onSubmit={console.log("hello")}>
+    <form className="filter" onSubmit={submitFilter}>
       <label className="filterLabel">
         Select a filter to see beverages:
         <select
           className="filterSelect"
-          value={"this.state.value"}
-          onChange={console.log("hi")}
+          value={state.filter}
+          onChange={(event) => {
+            dispatch({ type: "FILTER_DRINKS", filter: event.target.value });
+          }}
         >
-          <option value="Alcohol">Alcoholic</option>
+          <option defaultValue="Alcoholic">Alcoholic</option>
           <option value="Non_Alcoholic">Non Alcoholic</option>
           <option value="Beer">Beer</option>
           <option value="Shot">Shot</option>
@@ -23,8 +35,5 @@ const Search = () => {
     </form>
   );
 };
-
-//http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
-//http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
 
 export default Search;
