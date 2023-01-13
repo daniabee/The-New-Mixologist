@@ -22,7 +22,9 @@ import Sagittarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets
 import Capricorn from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Capricorn.png";
 import Aquarius from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Aquarius.png";
 import Pisces from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Pisces.png";
+import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 import { Link } from "react-router-dom";
+import { getCocktailInfo } from "../../apiCalls";
 
 const Form = () => {
   const [state, dispatch] = useContext(AppContext);
@@ -49,27 +51,31 @@ const Form = () => {
   };
 
   const pickDrink = (arr) => {
-    let newDrink = {};
-    const newDrinks = arr.filter((item) =>
+    let newDrinks = arr.filter((item) =>
       item.idDrink.includes(`${state.question3}`)
     );
-    if (!newDrink) {
+    if (!newDrinks) {
       newDrinks = arr.filter((item) =>
         item.idDrink.includes(`${state.question1}`)
       );
     }
     const index = Math.floor(Math.random() * newDrinks.length);
-    newDrink = [arr[index]];
-    return newDrink[0];
+    const drink = [arr[index]][0];
+    return drink;
   };
 
-  const getCocktailInfo = async () => {
-    const ingredientResponse = await fetch(
-      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.question2}`
-    );
-    const ingredient = await ingredientResponse.json();
-    const newDrink = pickDrink(ingredient.drinks);
-    dispatch({ type: "MY_DRINK", drink: newDrink });
+  const setCocktailInfo = async () => {
+    const drinks = await getCocktailInfo(state.question2);
+    if (drinks === "Error") {
+      const errorDrink = {
+        strDrink: "There was a problem on our end!",
+        strDrinkThumb: Logo,
+      };
+      dispatch({ type: "MY_DRINK", drink: errorDrink });
+    } else {
+      const newDrink = pickDrink(drinks);
+      dispatch({ type: "MY_DRINK", drink: newDrink });
+    }
   };
 
   const clearForm = () => {
@@ -82,7 +88,7 @@ const Form = () => {
   };
 
   const submitForm = () => {
-    getCocktailInfo();
+    setCocktailInfo();
     clearForm();
   };
 

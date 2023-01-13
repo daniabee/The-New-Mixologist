@@ -6,7 +6,7 @@ export const getCocktailInfo = async (ingredient) => {
       `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
     );
     const ingredients = await ingredientResponse.json();
-    return ingredients;
+    return ingredients.drinks;
   } catch {
     return "Error";
   }
