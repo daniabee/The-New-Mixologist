@@ -6,7 +6,6 @@ import Home from "../Home/Home";
 import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
-import Search from "../Search/Search";
 import { useReducer } from "react";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
@@ -63,7 +62,6 @@ function App() {
           <Route exact path="/whats-my-drink" element={<Quiz />} />
           <Route exact path="/random-drink" element={<RandomDrink />} />
           <Route exact path="/result" element={<Result />} />
-          <Route exact path="/search" element={<Search />} />
         </Routes>
       </div>
     </AppContext.Provider>
