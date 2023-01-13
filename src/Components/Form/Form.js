@@ -327,7 +327,7 @@ const Form = ({ setMyDrink }) => {
       <Link
         to="/result"
         className="submit-button"
-        onClick={() => {
+        onClick={(event) => {
           submitForm();
         }}
       >
