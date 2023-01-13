@@ -3,10 +3,12 @@
   justify-content: space-around;
   align-items: center;
   background-image: url("/src/Assets/NavBar.png");
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-position-x: center;
   width: 100vw;
   height: 18vh;
+  position: relative;
 }
 
 .navLink {
@@ -26,4 +28,5 @@
   color: white;
   text-decoration: none;
   text-align: center;
+  position: relative;
 }

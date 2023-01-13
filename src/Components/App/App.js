@@ -6,7 +6,7 @@ import Home from "../Home/Home";
 import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
-import { useEffect, useState, useReducer } from "react";
+import { useReducer } from "react";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 const initialState = {
