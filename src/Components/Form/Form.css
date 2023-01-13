@@ -4,17 +4,18 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5%;
+  width: 100vw;
 }
 
 .quizTitle {
-  width: 85vw;
+  width: 80vw;
   height: auto;
 }
 
 .quizForm {
   background-color: rgba(0, 0, 0, 0.607);
   box-shadow: 0 0 0.5rem #ff00a69f, 0 0 2rem #5b18f870;
-  width: 60vw;
+  width: 55vw;
   padding: 1%;
   margin-bottom: 5%;
 }
@@ -62,8 +63,8 @@
   width: 12vw;
   font-size: 1.5vw;
   font-weight: 600;
-  text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
-    0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
+  text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+    0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
   color: white;
   text-decoration: none;
   margin: 1%;
