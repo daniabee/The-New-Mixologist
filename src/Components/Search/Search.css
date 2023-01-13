@@ -1,0 +1,44 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 2vw;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.filterSelect {
+  height: 6vh;
+  width: auto;
+  text-align: center;
+  font-size: 2vw;
+  margin: 5%;
+  background-color: black;
+  color: #fff;
+}
+
+.filterButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center / contain no-repeat url("/src/Assets/Button.png");
+  height: 8vh;
+  width: 12vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+    0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+  margin: 1%;
+  border: none;
+}
+
+.filterButton:hover {
+  cursor: pointer;
+}
