@@ -3,11 +3,11 @@ import NavBar from "../NavBar/NavBar";
 import "./Quiz.css";
 import Form from "../Form/Form";
 
-const Quiz = ({ setMyDrink }) => {
+const Quiz = () => {
   return (
     <div>
       <NavBar />
-      <Form setMyDrink={setMyDrink} />
+      <Form />
     </div>
   );
 };

@@ -48,20 +48,6 @@ const Form = () => {
     dispatch({ type: "SELECTED_THREE", selected: event.target.id });
   };
 
-  const submitForm = () => {
-    getCocktailInfo();
-    clearForm();
-  };
-
-  const clearForm = () => {
-    dispatch({ type: "QUESTION_ONE", question: 0 });
-    dispatch({ type: "QUESTION_TWO", question: "" });
-    dispatch({ type: "QUESTION_THREE", question: 0 });
-    dispatch({ type: "SELECTED_ONE", selected: 0 });
-    dispatch({ type: "SELECTED_TWO", selected: 0 });
-    dispatch({ type: "SELECTED_THREE", selected: 0 });
-  };
-
   const pickDrink = (arr) => {
     let newDrink = {};
     const newDrinks = arr.filter((item) =>
@@ -78,13 +64,26 @@ const Form = () => {
   };
 
   const getCocktailInfo = async () => {
-    console.log(state.question2);
     const ingredientResponse = await fetch(
       `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${state.question2}`
     );
     const ingredient = await ingredientResponse.json();
     const newDrink = pickDrink(ingredient.drinks);
     dispatch({ type: "MY_DRINK", drink: newDrink });
+  };
+
+  const clearForm = () => {
+    dispatch({ type: "QUESTION_ONE", question: 0 });
+    dispatch({ type: "QUESTION_TWO", question: "" });
+    dispatch({ type: "QUESTION_THREE", question: 0 });
+    dispatch({ type: "SELECTED_ONE", selected: 0 });
+    dispatch({ type: "SELECTED_TWO", selected: 0 });
+    dispatch({ type: "SELECTED_THREE", selected: 0 });
+  };
+
+  const submitForm = () => {
+    getCocktailInfo();
+    clearForm();
   };
 
   return (
