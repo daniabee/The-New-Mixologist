@@ -1,6 +1,6 @@
 .navBar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-image: url("/src/Assets/NavBar.png");
   background-size: 98% 100%;
@@ -15,13 +15,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
   padding: 0.5%;
   background: center no-repeat url("/src/Assets/Button.png");
   background-size: 100% 100%;
   height: 8vh;
   width: 20vw;
-  font-size: 1.5vw;
+  font-size: 100%;
   font-weight: 600;
   text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
     0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
@@ -29,4 +28,53 @@
   text-decoration: none;
   text-align: center;
   position: relative;
+}
+
+@media screen and (min-width: 375px) {
+  .navLink {
+    font-size: 70%;
+  }
+}
+
+@media screen and (min-height: 740px) {
+  .navLink {
+    font-size: 70%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .navLink {
+    font-size: 100%;
+  }
+  .navBar {
+    width: 96%;
+  }
+  .home {
+    margin: 0;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .navLink {
+    font-size: 90%;
+  }
+  .navBar {
+    background-size: 96% 70%;
+    background-position: left;
+  }
+  .home {
+    margin: 0;
+  }
+}
+
+@media screen and (min-height: 1368px) {
+  .navLink {
+    font-size: 110%;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .navLink {
+    font-size: 30%;
+  }
 }

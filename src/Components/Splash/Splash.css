@@ -6,8 +6,8 @@
 }
 
 .title {
-  height: 80vh;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 
 .start-button {
@@ -25,3 +25,33 @@
   text-decoration: none;
   margin: 1%;
 }
+
+@media screen and (min-width: 280px) and (max-width: 900px) {
+  .start-button {
+    height: 30vh;
+    width: 50vw;
+    font-size: 5vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+  }
+  .splash {
+    justify-content: flex-end;
+    height: 80vh;
+  }
+}
+
+/* @media screen and (280px <= width <= 1000) {
+  .start-button {
+    height: 30vh;
+    width: 50vw;
+    font-size: 5vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+  }
+  .splash {
+    justify-content: flex-end;
+    height: 80vh;
+  }
+} */
