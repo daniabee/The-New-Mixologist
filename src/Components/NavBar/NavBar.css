@@ -30,51 +30,20 @@
   position: relative;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 280px) and (max-width: 300px) {
+  .navLink {
+    font-size: 45%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
   .navLink {
     font-size: 70%;
   }
 }
 
-@media screen and (min-height: 740px) {
-  .navLink {
-    font-size: 70%;
-  }
-}
-
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 800px) and (max-width: 900px) {
   .navLink {
     font-size: 100%;
-  }
-  .navBar {
-    width: 96%;
-  }
-  .home {
-    margin: 0;
-  }
-}
-
-@media screen and (min-height: 1024px) {
-  .navLink {
-    font-size: 90%;
-  }
-  .navBar {
-    background-size: 96% 70%;
-    background-position: left;
-  }
-  .home {
-    margin: 0;
-  }
-}
-
-@media screen and (min-height: 1368px) {
-  .navLink {
-    font-size: 110%;
-  }
-}
-
-@media screen and (min-width: 280px) {
-  .navLink {
-    font-size: 30%;
   }
 }
