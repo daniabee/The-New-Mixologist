@@ -39,3 +39,43 @@
 .randomButton:hover {
   cursor: pointer;
 }
+
+@media screen and (min-width: 280px) and (max-width: 540px) {
+  .drinkName {
+    font-size: 6vw;
+  }
+  .drinkImg {
+    height: auto;
+    width: 50vw;
+  }
+
+  .randomButton {
+    height: 30vh;
+    width: 50vw;
+    font-size: 5vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+    margin: -20%;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 930px) {
+  .drinkName {
+    font-size: 6vw;
+  }
+  .drinkImg {
+    height: auto;
+    width: 50vw;
+  }
+
+  .randomButton {
+    height: 30vh;
+    width: 50vw;
+    font-size: 5vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+    margin: 3%;
+  }
+}
