@@ -20,3 +20,15 @@
   text-decoration: none;
   margin: 1%;
 }
+
+@media screen and (min-width: 280px) and (max-width: 930px) {
+  .back-button {
+    height: 10vh;
+    width: 30vw;
+    font-size: 3vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+    margin: 3%;
+  }
+}
