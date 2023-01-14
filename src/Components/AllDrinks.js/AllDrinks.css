@@ -5,3 +5,9 @@
   justify-items: center;
   justify-content: center;
 }
+
+@media screen and (min-width: 280px) and (max-width: 930px) {
+  .allDrinksCont {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
