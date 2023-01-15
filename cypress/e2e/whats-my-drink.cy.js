@@ -81,4 +81,28 @@ describe("What's my drink", () => {
     cy.get("#19").should("have.attr", "alt", "Aquarius");
     cy.get("#20").should("have.attr", "alt", "Pisces");
   });
+  it("User should be able to choose options and see that it's selected", () => {
+    cy.get("#1")
+      .click()
+      .should("have.attr", "class", "selected option")
+      .should("have.css", "border", "4px solid rgb(255, 255, 0)");
+    cy.get("#2").should("have.attr", "class", "option");
+    cy.get("#3").should("have.attr", "class", "option");
+    cy.get("#4").should("have.attr", "class", "option");
+  });
+  it("User should see a results page after submitting", () => {
+    cy.intercept(
+      "GET",
+      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee`,
+      { fixture: "allDrinks" }
+    );
+    cy.get("#1").click();
+    cy.get("#5").click();
+    cy.get("#19").click();
+    cy.contains("SUBMIT").click();
+    cy.get(".drinkName").contains("Test1");
+    cy.get(".drinkImg").should("have.attr", "src");
+
+    cy.get(".back-button").click();
+  });
 });
