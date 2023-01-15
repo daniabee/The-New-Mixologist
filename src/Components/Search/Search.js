@@ -12,7 +12,7 @@ const Search = () => {
     if (drinks === "Error") {
       dispatch({ type: "SET_ERROR", error: true });
     }
-    dispatch({ type: "ALL_DRINKS", allDrinks: drinks.drinks });
+    dispatch({ type: "ALL_DRINKS", allDrinks: drinks });
   };
 
   return (

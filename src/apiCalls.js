@@ -34,8 +34,9 @@ export const getAllDrinks = async (filter) => {
     }
     const response = await fetch(URL);
     const allDrinks = await response.json();
-    return allDrinks;
+    return allDrinks.drinks;
   } catch {
+    console.log("error");
     return "Error";
   }
 };
