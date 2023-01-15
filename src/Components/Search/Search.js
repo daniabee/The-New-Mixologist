@@ -9,6 +9,9 @@ const Search = () => {
   const submitFilter = async (event) => {
     event.preventDefault();
     const drinks = await getAllDrinks(state.filter);
+    if (drinks === "Error") {
+      dispatch({ type: "SET_ERROR", error: true });
+    }
     dispatch({ type: "ALL_DRINKS", allDrinks: drinks.drinks });
   };
 

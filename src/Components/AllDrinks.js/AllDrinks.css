@@ -6,6 +6,14 @@
   justify-content: center;
 }
 
+.error {
+  text-align: center;
+  color: white;
+  font-size: 2vw;
+  text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+    0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+}
+
 @media screen and (min-width: 280px) and (max-width: 930px) {
   .allDrinksCont {
     grid-template-columns: repeat(1, 1fr);
