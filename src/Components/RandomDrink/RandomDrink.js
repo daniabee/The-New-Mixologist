@@ -10,7 +10,16 @@ const RandomDrink = () => {
 
   const setRandomDrink = async () => {
     const random = await getRandomDrink();
-    dispatch({ type: "RANDOM_DRINK", randomDrink: random });
+
+    if (random === "Error") {
+      const error = {
+        strDrink: "There was a problem on our end!",
+        strDrinkThumb: Logo,
+      };
+      dispatch({ type: "RANDOM_DRINK", randomDrink: error });
+    } else {
+      dispatch({ type: "RANDOM_DRINK", randomDrink: random });
+    }
   };
 
   return (

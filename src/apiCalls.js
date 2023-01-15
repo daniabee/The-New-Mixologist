@@ -1,5 +1,4 @@
 import { getActiveElement } from "@testing-library/user-event/dist/utils";
-import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 export const getCocktailInfo = async (ingredient) => {
   try {
@@ -21,11 +20,7 @@ export const getRandomDrink = async () => {
     const random = await response.json();
     return random.drinks[0];
   } catch {
-    const random = {
-      strDrink: "There was a problem on our end!",
-      strDrinkThumb: Logo,
-    };
-    return random;
+    return "Error";
   }
 };
 
@@ -39,8 +34,9 @@ export const getAllDrinks = async (filter) => {
     }
     const response = await fetch(URL);
     const allDrinks = await response.json();
-    return allDrinks;
+    return allDrinks.drinks;
   } catch {
+    console.log("error");
     return "Error";
   }
 };

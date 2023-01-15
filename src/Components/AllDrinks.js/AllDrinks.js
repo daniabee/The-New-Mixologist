@@ -5,13 +5,17 @@ import AppContext from "../App/AppContext";
 
 const AllDrinks = () => {
   const [state, dispatch] = useContext(AppContext);
-
-  const drinks = state.allDrinks.map((item) => {
-    console.log(item);
-    return <Drink drink={item} />;
-  });
-
-  return <div className="allDrinksCont">{drinks}</div>;
+  let drinks;
+  if (!state.error) {
+    drinks = state.allDrinks.map((item) => {
+      return <Drink key={item.idDrink} drink={item} />;
+    });
+  }
+  return (
+    <div className={state.error ? "error" : "allDrinksCont"}>
+      {state.error ? <h1>There was a problem getting your drinks!</h1> : drinks}
+    </div>
+  );
 };
 
 export default AllDrinks;

@@ -8,6 +8,8 @@ import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
 import { useEffect, useReducer } from "react";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
+import PropTypes, { string, shape, array, number } from "prop-types";
+import { act } from "react-dom/test-utils";
 
 const initialState = {
   filter: "Alcoholic",
@@ -20,13 +22,14 @@ const initialState = {
     strDrink: "Click the button to get a drink!",
     strDrinkThumb: Logo,
   },
-  question1: "",
+  question1: 0,
   question2: "",
-  question3: "",
+  question3: 0,
 
   selected1: 0,
-  selected2: 0,
+  selected2: "",
   selected3: 0,
+  error: false,
 };
 
 const reducer = (state, action) => {
@@ -51,6 +54,8 @@ const reducer = (state, action) => {
       return { ...state, filter: action.filter };
     case "ALL_DRINKS":
       return { ...state, allDrinks: action.allDrinks };
+    case "SET_ERROR":
+      return { ...state, error: action.error };
     default:
       return state;
   }
@@ -58,10 +63,6 @@ const reducer = (state, action) => {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  // useEffect(() => {
-
-  // }, state.allDrinks);
 
   return (
     <AppContext.Provider value={[state, dispatch]}>
@@ -79,3 +80,25 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  context: PropTypes.shape({
+    filter: PropTypes.string.isRequired,
+    allDrinks: PropTypes.array.isRequired,
+    myDrink: PropTypes.shape({
+      strDrink: PropTypes.string.isRequired,
+      strDrinkThumb: PropTypes.string.isRequired,
+    }).isRequired,
+    randomDrink: PropTypes.shape({
+      strDrink: PropTypes.string.isRequired,
+      strDrinkThumb: PropTypes.string.isRequired,
+    }).isRequired,
+    question1: PropTypes.number,
+    question2: PropTypes.string,
+    question3: PropTypes.number,
+    selected1: PropTypes.number,
+    selected2: PropTypes.string,
+    selected3: PropTypes.number,
+    error: PropTypes.bool,
+  }),
+};

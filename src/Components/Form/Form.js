@@ -61,9 +61,25 @@ const Form = () => {
 
   const setCocktailInfo = async () => {
     const drinks = await getCocktailInfo(state.question2);
-    if (drinks === "Error") {
+    if (
+      drinks === "Error" &&
+      state.question1 != 0 &&
+      state.question2 != "" &&
+      state.question3 != 0
+    ) {
       const errorDrink = {
-        strDrink: "There was a problem on our end!",
+        strDrink: "There was a problem getting your drink!",
+        strDrinkThumb: Logo,
+      };
+      dispatch({ type: "MY_DRINK", drink: errorDrink });
+    } else if (
+      state.question1 === 0 ||
+      !state.question2 ||
+      state.question3 === 0
+    ) {
+      const errorDrink = {
+        strDrink:
+          "There was a problem getting your drink! Please make sure you fill out the quiz completely!",
         strDrinkThumb: Logo,
       };
       dispatch({ type: "MY_DRINK", drink: errorDrink });
@@ -89,7 +105,7 @@ const Form = () => {
 
   return (
     <div className="quiz">
-      <img className="quizTitle" src={QuizTitle} />
+      <img className="quizTitle" src={QuizTitle} alt="Find Your Drink!" />
       <form className="quizForm">
         <div className="question1">
           <h3 className="quizLabel">1. Choose a glass:</h3>
@@ -106,6 +122,7 @@ const Form = () => {
               name="Cocktail_glass"
               src={Cocktailglass}
               tabIndex={1}
+              alt="Cocktail glass"
             />
             <input
               className={state.selected1 == 2 ? "selected option" : "option"}
@@ -114,6 +131,7 @@ const Form = () => {
               name="Highball_glass"
               src={Highballglass}
               tabIndex={1}
+              alt="Highball glass"
             />
             <input
               className={state.selected1 == 3 ? "selected option" : "option"}
@@ -122,6 +140,7 @@ const Form = () => {
               name="Martini_glass"
               src={Martiniglass}
               tabIndex={1}
+              alt="Martini glass"
             />
             <input
               className={state.selected1 == 4 ? "selected option" : "option"}
@@ -130,6 +149,7 @@ const Form = () => {
               name="Whiskey_glass"
               src={Whiskeyglass}
               tabIndex={1}
+              alt="Whiskey glass"
             />
           </label>
         </div>
@@ -148,6 +168,7 @@ const Form = () => {
               name="Coffee"
               src={Coffee}
               tabIndex={1}
+              alt="Coffee"
             />
             <input
               className={state.selected2 == 6 ? "selected option" : "option"}
@@ -156,6 +177,7 @@ const Form = () => {
               name="Lime"
               src={Limes}
               tabIndex={1}
+              alt="Lime"
             />
             <input
               className={state.selected2 == 7 ? "selected option" : "option"}
@@ -164,6 +186,7 @@ const Form = () => {
               name="Strawberries"
               src={Strawberries}
               tabIndex={1}
+              alt="Strawberries"
             />
             <input
               className={state.selected2 == 8 ? "selected option" : "option"}
@@ -172,6 +195,7 @@ const Form = () => {
               name="Tomato_juice"
               src={Tomato}
               tabIndex={1}
+              alt="Tomato juice"
             />
           </label>
         </div>
@@ -192,6 +216,7 @@ const Form = () => {
               name="Aries"
               src={Aries}
               tabIndex={1}
+              alt="Aries"
             />
             <input
               className={
@@ -202,6 +227,7 @@ const Form = () => {
               name="Taurus"
               src={Taurus}
               tabIndex={1}
+              alt="Taurus"
             />
             <input
               className={
@@ -212,6 +238,7 @@ const Form = () => {
               name="Gemini"
               src={Gemini}
               tabIndex={1}
+              alt="Gemini"
             />
             <input
               className={
@@ -222,6 +249,7 @@ const Form = () => {
               name="Cancer"
               src={Cancer}
               tabIndex={1}
+              alt="Cancer"
             />
             <input
               className={
@@ -232,6 +260,7 @@ const Form = () => {
               name="Leo"
               src={Leo}
               tabIndex={1}
+              alt="Leo"
             />
             <input
               className={
@@ -242,6 +271,7 @@ const Form = () => {
               name="Virgo"
               src={Virgo}
               tabIndex={1}
+              alt="Virgo"
             />
             <input
               className={
@@ -252,6 +282,7 @@ const Form = () => {
               name="Libra"
               src={Libra}
               tabIndex={1}
+              alt="Libra"
             />
             <input
               className={
@@ -262,6 +293,7 @@ const Form = () => {
               name="Scorpio"
               src={Scorpio}
               tabIndex={1}
+              alt="Scorpio"
             />
             <input
               className={
@@ -272,6 +304,7 @@ const Form = () => {
               name="Sagittarius"
               src={Sagittarius}
               tabIndex={1}
+              alt="Sagittarius"
             />
             <input
               className={
@@ -282,6 +315,7 @@ const Form = () => {
               name="Capricorn"
               src={Capricorn}
               tabIndex={1}
+              alt="Capricorn"
             />
             <input
               className={
@@ -292,6 +326,7 @@ const Form = () => {
               name="Aquarius"
               src={Aquarius}
               tabIndex={1}
+              alt="Aquarius"
             />
             <input
               className={
@@ -302,6 +337,7 @@ const Form = () => {
               name="Pisces"
               src={Pisces}
               tabIndex={1}
+              alt="Pisces"
             />
           </label>
         </div>

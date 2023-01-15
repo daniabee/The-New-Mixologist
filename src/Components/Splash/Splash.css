@@ -8,6 +8,8 @@
 .title {
   height: auto;
   width: 100%;
+  animation: blink 0.25s;
+  animation-iteration-count: 2;
 }
 
 .start-button {
@@ -24,6 +26,30 @@
   color: white;
   text-decoration: none;
   margin: 1%;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (min-width: 280px) and (max-width: 900px) {

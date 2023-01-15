@@ -1,0 +1,19 @@
+{
+  "drinks": [
+    {
+      "idDrink": "1",
+      "strDrink": "Test1",
+      "strDrinkThumb": "image"
+    },
+    {
+      "idDrink": "2",
+      "strDrink": "Test2",
+      "strDrinkThumb": "image"
+    },
+    {
+      "idDrink": "3",
+      "strDrink": "Test3",
+      "strDrinkThumb": "image"
+    }
+  ]
+}
