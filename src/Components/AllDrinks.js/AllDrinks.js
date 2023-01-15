@@ -7,7 +7,6 @@ const AllDrinks = () => {
   const [state, dispatch] = useContext(AppContext);
 
   const drinks = state.allDrinks.map((item) => {
-    console.log(item);
     return <Drink drink={item} />;
   });
 
