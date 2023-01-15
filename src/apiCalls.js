@@ -21,11 +21,7 @@ export const getRandomDrink = async () => {
     const random = await response.json();
     return random.drinks[0];
   } catch {
-    const random = {
-      strDrink: "There was a problem on our end!",
-      strDrinkThumb: Logo,
-    };
-    return random;
+    return "Error";
   }
 };
 
