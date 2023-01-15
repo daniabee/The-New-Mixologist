@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: center / contain no-repeat url("/src/Assets/Button.png");
+  background: center / contain no-repeat url("../Assets/Button.png");
   height: 8vh;
   width: 12vw;
   font-size: 1.5vw;

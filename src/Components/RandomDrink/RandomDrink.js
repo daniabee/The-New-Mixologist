@@ -3,7 +3,7 @@ import AppContext from "../App/AppContext";
 import NavBar from "../NavBar/NavBar";
 import "./RandomDrink.css";
 import { getRandomDrink } from "../../apiCalls";
-import Logo from "/src/Assets/logo.png";
+import Logo from "../Assets/logo.png";
 
 const RandomDrink = () => {
   const [state, dispatch] = useContext(AppContext);

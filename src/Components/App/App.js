@@ -7,7 +7,7 @@ import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
 import { useReducer } from "react";
-import Logo from "/src/Assets/logo.png";
+import Logo from "../Assets/logo.png";
 import PropTypes, { string, shape, array, number } from "prop-types";
 
 const initialState = {

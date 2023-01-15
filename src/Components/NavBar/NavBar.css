@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/src/Assets/NavBar.png");
+  background-image: url("../Assets/NavBar.png");
   background-size: 98% 100%;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   padding: 0.5%;
-  background: center no-repeat url("/src/Assets/Button.png");
+  background: center no-repeat url("../Assets/Button.png");
   background-size: 100% 100%;
   height: 8vh;
   width: 20vw;
