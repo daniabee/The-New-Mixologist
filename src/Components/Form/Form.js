@@ -61,9 +61,25 @@ const Form = () => {
 
   const setCocktailInfo = async () => {
     const drinks = await getCocktailInfo(state.question2);
-    if (drinks === "Error") {
+    if (
+      drinks === "Error" &&
+      state.question1 != 0 &&
+      state.question2 != "" &&
+      state.question3 != 0
+    ) {
       const errorDrink = {
-        strDrink: "There was a problem on our end!",
+        strDrink: "There was a problem getting your drink!",
+        strDrinkThumb: Logo,
+      };
+      dispatch({ type: "MY_DRINK", drink: errorDrink });
+    } else if (
+      state.question1 === 0 ||
+      !state.question2 ||
+      state.question3 === 0
+    ) {
+      const errorDrink = {
+        strDrink:
+          "There was a problem getting your drink! Please make sure you fill out the quiz completely!",
         strDrinkThumb: Logo,
       };
       dispatch({ type: "MY_DRINK", drink: errorDrink });
