@@ -3,17 +3,22 @@
     {
       "idDrink": "1",
       "strDrink": "Test1",
-      "strDrinkThumb": "image"
+      "strDrinkThumb": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTlvmuKDXfNDudIA6gVzO0zM89FvanJMDAw&usqp=CAU"
     },
     {
       "idDrink": "2",
       "strDrink": "Test2",
-      "strDrinkThumb": "image"
+      "strDrinkThumb": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTlvmuKDXfNDudIA6gVzO0zM89FvanJMDAw&usqp=CAU"
     },
     {
       "idDrink": "3",
       "strDrink": "Test3",
-      "strDrinkThumb": "image"
+      "strDrinkThumb": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTlvmuKDXfNDudIA6gVzO0zM89FvanJMDAw&usqp=CAU"
+    },
+    {
+      "idDrink": "4",
+      "strDrink": "Test4",
+      "strDrinkThumb": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTlvmuKDXfNDudIA6gVzO0zM89FvanJMDAw&usqp=CAU"
     }
   ]
 }
