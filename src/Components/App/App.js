@@ -1,15 +1,14 @@
 import "./App.css";
 import AppContext from "./AppContext";
-import { Route, NavLink, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Splash from "../Splash/Splash";
 import Home from "../Home/Home";
 import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
-import { useEffect, useReducer } from "react";
-import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
+import { useReducer } from "react";
+import Logo from "/src/Assets/logo.png";
 import PropTypes, { string, shape, array, number } from "prop-types";
-import { act } from "react-dom/test-utils";
 
 const initialState = {
   filter: "Alcoholic",

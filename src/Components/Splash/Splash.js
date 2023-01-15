@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/Title.png";
+import Title from "/src/Assets/Title.png";
 import "./Splash.css";
 import { Link } from "react-router-dom";
 
