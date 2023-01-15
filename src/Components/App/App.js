@@ -8,6 +8,7 @@ import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
 import { useEffect, useReducer } from "react";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
+import PropTypes, { string, shape, array, number } from "prop-types";
 
 const initialState = {
   filter: "Alcoholic",
@@ -20,12 +21,12 @@ const initialState = {
     strDrink: "Click the button to get a drink!",
     strDrinkThumb: Logo,
   },
-  question1: "",
+  question1: 0,
   question2: "",
-  question3: "",
+  question3: 0,
 
   selected1: 0,
-  selected2: 0,
+  selected2: "",
   selected3: 0,
 };
 
@@ -79,3 +80,24 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  context: PropTypes.shape({
+    filter: PropTypes.string.isRequired,
+    allDrinks: PropTypes.array.isRequired,
+    myDrink: PropTypes.shape({
+      strDrink: PropTypes.string.isRequired,
+      strDrinkThumb: PropTypes.string.isRequired,
+    }).isRequired,
+    randomDrink: PropTypes.shape({
+      strDrink: PropTypes.string.isRequired,
+      strDrinkThumb: PropTypes.string.isRequired,
+    }).isRequired,
+    question1: PropTypes.number,
+    question2: PropTypes.string,
+    question3: PropTypes.number,
+    selected1: PropTypes.number,
+    selected2: PropTypes.string,
+    selected3: PropTypes.number,
+  }),
+};
