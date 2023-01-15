@@ -36,7 +36,6 @@ export const getAllDrinks = async (filter) => {
     const allDrinks = await response.json();
     return allDrinks.drinks;
   } catch {
-    console.log("error");
     return "Error";
   }
 };
