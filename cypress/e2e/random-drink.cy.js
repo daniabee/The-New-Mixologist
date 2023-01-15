@@ -15,7 +15,7 @@ describe("random page", () => {
   it("Should show a drink thumnail when user clicks the button", () => {
     cy.intercept(
       "GET",
-      "http://www.thecocktaildb.com/api/json/v1/1/random.php",
+      "https://www.thecocktaildb.com/api/json/v1/1/random.php",
       { fixture: "allDrinks" }
     );
     cy.get(".randomButton").click();

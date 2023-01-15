@@ -27,7 +27,7 @@ describe("Filter drinks page", () => {
   it("User should be able to see associated beverages of filter", () => {
     cy.intercept(
       "GET",
-      "http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
+      "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
       { fixture: "allDrinks" }
     );
     cy.get(".filterButton").click();

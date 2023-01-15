@@ -3,7 +3,7 @@ import { getActiveElement } from "@testing-library/user-event/dist/utils";
 export const getCocktailInfo = async (ingredient) => {
   try {
     const ingredientResponse = await fetch(
-      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
     );
     const ingredients = await ingredientResponse.json();
     return ingredients.drinks;
@@ -15,7 +15,7 @@ export const getCocktailInfo = async (ingredient) => {
 export const getRandomDrink = async () => {
   try {
     const response = await fetch(
-      "http://www.thecocktaildb.com/api/json/v1/1/random.php"
+      "https://www.thecocktaildb.com/api/json/v1/1/random.php"
     );
     const random = await response.json();
     return random.drinks[0];
@@ -28,9 +28,9 @@ export const getAllDrinks = async (filter) => {
   try {
     let URL;
     if (filter === "Alcoholic" || filter === "Non_Alcoholic") {
-      URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${filter}`;
+      URL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${filter}`;
     } else {
-      URL = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filter}`;
+      URL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filter}`;
     }
     const response = await fetch(URL);
     const allDrinks = await response.json();

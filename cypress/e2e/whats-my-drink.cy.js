@@ -93,7 +93,7 @@ describe("What's my drink", () => {
   it("User should see a results page after submitting", () => {
     cy.intercept(
       "GET",
-      `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee`,
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee`,
       { fixture: "allDrinks" }
     );
     cy.get("#1").click();
