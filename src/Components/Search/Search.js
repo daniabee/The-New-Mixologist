@@ -10,7 +10,6 @@ const Search = () => {
     event.preventDefault();
     const drinks = await getAllDrinks(state.filter);
     dispatch({ type: "ALL_DRINKS", allDrinks: drinks.drinks });
-    console.log(state.allDrinks);
   };
 
   return (
