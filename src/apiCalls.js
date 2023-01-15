@@ -1,5 +1,4 @@
 import { getActiveElement } from "@testing-library/user-event/dist/utils";
-import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 export const getCocktailInfo = async (ingredient) => {
   try {
