@@ -6,10 +6,12 @@ import Home from "../Home/Home";
 import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import Logo from "/Users/danibagley/Turing/mod3/new-mixologist/src/Assets/logo.png";
 
 const initialState = {
+  filter: "Alcoholic",
+  allDrinks: [],
   myDrink: {
     strDrink: "Complete the quiz to see your drink!",
     strDrinkThumb: Logo,
@@ -45,6 +47,10 @@ const reducer = (state, action) => {
       return { ...state, selected3: action.selected };
     case "RANDOM_DRINK":
       return { ...state, randomDrink: action.randomDrink };
+    case "FILTER_DRINKS":
+      return { ...state, filter: action.filter };
+    case "ALL_DRINKS":
+      return { ...state, allDrinks: action.allDrinks };
     default:
       return state;
   }
@@ -52,6 +58,10 @@ const reducer = (state, action) => {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  // useEffect(() => {
+
+  // }, state.allDrinks);
 
   return (
     <AppContext.Provider value={[state, dispatch]}>

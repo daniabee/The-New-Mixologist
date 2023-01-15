@@ -1,16 +1,28 @@
-.splash {
+.filter {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
-.title {
-  height: auto;
-  width: 100%;
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 2vw;
+  font-weight: 600;
+  color: #ffff;
 }
 
-.start-button {
+.filterSelect {
+  height: 6vh;
+  width: auto;
+  text-align: center;
+  font-size: 2vw;
+  margin: 5%;
+  background-color: black;
+  color: #fff;
+}
+
+.filterButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,19 +36,26 @@
   color: white;
   text-decoration: none;
   margin: 1%;
+  border: none;
 }
 
-@media screen and (min-width: 280px) and (max-width: 900px) {
-  .start-button {
+.filterButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 280px) and (max-width: 930px) {
+  .filterLabel,
+  .filterSelect {
+    font-size: 6vw;
+  }
+
+  .filterButton {
     height: 30vh;
     width: 50vw;
     font-size: 5vw;
     font-weight: 600;
     text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
       0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
-  }
-  .splash {
-    justify-content: flex-end;
-    height: 80vh;
+    margin: -20%;
   }
 }
