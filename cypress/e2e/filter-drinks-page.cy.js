@@ -40,4 +40,16 @@ describe("Filter drinks page", () => {
     cy.get(".drinkThumb").eq(3).contains("Test4");
     cy.get(".drinkThumb").eq(3).get("img");
   });
+  it("User should see an error message if network request fails", () => {
+    cy.intercept(
+      "GET",
+      "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink",
+      {
+        statusCode: 404,
+      }
+    );
+    cy.get(".filterSelect").select("Ordinary_Drink");
+    cy.get(".filterButton").click();
+    cy.contains("There was a problem getting your drinks!");
+  });
 });
