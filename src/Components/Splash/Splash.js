@@ -11,7 +11,7 @@ const Splash = () => {
     <div className="splash">
       <img className="title" src={Title} alt="New Mixologist" />
       <Link
-        to="/home"
+        to="/filter-cocktails"
         className="start-button"
         onClick={() => {
           dispatch({
