@@ -30,25 +30,25 @@
 
 @keyframes blink {
   0% {
-    filter: sepia(60%);
+    filter: saturate(100%);
   }
   19% {
-    filter: sepia(0%);
+    filter: saturate(0%);
   }
   20% {
-    filter: sepia(60%);
+    filter: saturate(60%);
   }
   50% {
-    filter: sepia(0%);
+    filter: saturate(0%);
   }
   49% {
-    filter: sepia(0%);
+    filter: saturate(0%);
   }
   50% {
-    filter: sepia(60%);
+    filter: saturate(60%);
   }
   100% {
-    filter: sepia(60%);
+    filter: saturate(60%);
   }
 }
 
