@@ -140,7 +140,7 @@ const Form = () => {
               id={1}
               name="Cocktail_glass"
               src={Cocktailglass}
-              tabIndex={1}
+              tabIndex={0}
               alt="Cocktail glass"
             />
             <input
@@ -149,7 +149,7 @@ const Form = () => {
               id={2}
               name="Highball_glass"
               src={Highballglass}
-              tabIndex={1}
+              tabIndex={0}
               alt="Highball glass"
             />
             <input
@@ -158,7 +158,7 @@ const Form = () => {
               id={3}
               name="Martini_glass"
               src={Martiniglass}
-              tabIndex={1}
+              tabIndex={0}
               alt="Martini glass"
             />
             <input
@@ -167,7 +167,7 @@ const Form = () => {
               id={4}
               name="Whiskey_glass"
               src={Whiskeyglass}
-              tabIndex={1}
+              tabIndex={0}
               alt="Whiskey glass"
             />
           </label>
@@ -186,7 +186,7 @@ const Form = () => {
               id={5}
               name="Coffee"
               src={Coffee}
-              tabIndex={1}
+              tabIndex={0}
               alt="Coffee"
             />
             <input
@@ -195,7 +195,7 @@ const Form = () => {
               id={6}
               name="Lime"
               src={Limes}
-              tabIndex={1}
+              tabIndex={0}
               alt="Lime"
             />
             <input
@@ -204,7 +204,7 @@ const Form = () => {
               id={7}
               name="Strawberries"
               src={Strawberries}
-              tabIndex={1}
+              tabIndex={0}
               alt="Strawberries"
             />
             <input
@@ -213,7 +213,7 @@ const Form = () => {
               id={8}
               name="Tomato_juice"
               src={Tomato}
-              tabIndex={1}
+              tabIndex={0}
               alt="Tomato juice"
             />
           </label>
@@ -234,7 +234,7 @@ const Form = () => {
               id={9}
               name="Aries"
               src={Aries}
-              tabIndex={1}
+              tabIndex={0}
               alt="Aries"
             />
             <input
@@ -245,7 +245,7 @@ const Form = () => {
               id={10}
               name="Taurus"
               src={Taurus}
-              tabIndex={1}
+              tabIndex={0}
               alt="Taurus"
             />
             <input
@@ -256,7 +256,7 @@ const Form = () => {
               id={11}
               name="Gemini"
               src={Gemini}
-              tabIndex={1}
+              tabIndex={0}
               alt="Gemini"
             />
             <input
@@ -267,7 +267,7 @@ const Form = () => {
               id={12}
               name="Cancer"
               src={Cancer}
-              tabIndex={1}
+              tabIndex={0}
               alt="Cancer"
             />
             <input
@@ -278,7 +278,7 @@ const Form = () => {
               id={13}
               name="Leo"
               src={Leo}
-              tabIndex={1}
+              tabIndex={0}
               alt="Leo"
             />
             <input
@@ -289,7 +289,7 @@ const Form = () => {
               id={14}
               name="Virgo"
               src={Virgo}
-              tabIndex={1}
+              tabIndex={0}
               alt="Virgo"
             />
             <input
@@ -300,7 +300,7 @@ const Form = () => {
               id={15}
               name="Libra"
               src={Libra}
-              tabIndex={1}
+              tabIndex={0}
               alt="Libra"
             />
             <input
@@ -311,7 +311,7 @@ const Form = () => {
               id={16}
               name="Scorpio"
               src={Scorpio}
-              tabIndex={1}
+              tabIndex={0}
               alt="Scorpio"
             />
             <input
@@ -322,7 +322,7 @@ const Form = () => {
               id={17}
               name="Sagittarius"
               src={Sagittarius}
-              tabIndex={1}
+              tabIndex={0}
               alt="Sagittarius"
             />
             <input
@@ -333,7 +333,7 @@ const Form = () => {
               id={18}
               name="Capricorn"
               src={Capricorn}
-              tabIndex={1}
+              tabIndex={0}
               alt="Capricorn"
             />
             <input
@@ -344,7 +344,7 @@ const Form = () => {
               id={19}
               name="Aquarius"
               src={Aquarius}
-              tabIndex={1}
+              tabIndex={0}
               alt="Aquarius"
             />
             <input
@@ -355,7 +355,7 @@ const Form = () => {
               id={20}
               name="Pisces"
               src={Pisces}
-              tabIndex={1}
+              tabIndex={0}
               alt="Pisces"
             />
           </label>

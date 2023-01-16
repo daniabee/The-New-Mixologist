@@ -28,7 +28,7 @@ const NavBar = () => {
         HOME
       </NavLink>
       <NavLink
-        to="/home"
+        to="/filter-cocktails"
         className={
           state.currentPage === "FILTER COCKTAILS"
             ? "navLink currentPage"

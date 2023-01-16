@@ -2,7 +2,7 @@ import "./App.css";
 import AppContext from "./AppContext";
 import { Route, Routes } from "react-router-dom";
 import Splash from "../Splash/Splash";
-import Home from "../Home/Home";
+import Filter from "../Filter/Filter";
 import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
@@ -72,7 +72,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Splash />} />
-          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/filter-cocktails" element={<Filter />} />
           <Route exact path="/whats-my-drink" element={<Quiz />} />
           <Route exact path="/random-drink" element={<RandomDrink />} />
           <Route exact path="/result" element={<Result />} />

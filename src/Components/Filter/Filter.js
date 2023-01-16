@@ -1,11 +1,11 @@
 import React from "react";
-import "./Home.css";
+import "./Filter.css";
 import NavBar from "../NavBar/NavBar";
 import Question from "../Assets/Question.png";
 import Search from "../Search/Search";
 import AllDrinks from "../AllDrinks.js/AllDrinks";
 
-const Home = () => {
+const Filter = () => {
   return (
     <div className="home">
       <NavBar />
@@ -18,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Filter;

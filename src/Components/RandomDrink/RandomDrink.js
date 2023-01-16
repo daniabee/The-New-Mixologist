@@ -28,9 +28,16 @@ const RandomDrink = () => {
       <div className="drinkThumbnail">
         <h1 className="drinkName">{state.randomDrink.strDrink}</h1>
         <img className="drinkImg" src={state.randomDrink.strDrinkThumb} />
-        <div className="randomButton" onClick={setRandomDrink}>
+        <button
+          className="randomButton"
+          onClick={(event) => {
+            event.preventDefault();
+            setRandomDrink();
+          }}
+          tabIndex={0}
+        >
           NEW DRINK
-        </div>
+        </button>
       </div>
     </div>
   );
