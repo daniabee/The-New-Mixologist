@@ -99,7 +99,7 @@ describe("What's my drink", () => {
     cy.get("#1").click();
     cy.get("#5").click();
     cy.get("#19").click();
-    cy.contains("SUBMIT").click();
+    cy.contains("GET DRINK!").click();
     cy.get(".drinkName").contains("Test1");
     cy.get(".drinkImg").should("have.attr", "src");
 
