@@ -52,11 +52,26 @@
   }
 }
 
-@media screen and (min-width: 280px) and (max-width: 900px) {
+@media screen and (min-width: 280px) and (max-width: 500px) {
   .start-button {
     height: 30vh;
     width: 50vw;
     font-size: 5vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+  }
+  .splash {
+    justify-content: flex-end;
+    height: 80vh;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 930px) {
+  .start-button {
+    height: 30vh;
+    width: 50vw;
+    font-size: 3vw;
     font-weight: 600;
     text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
       0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
