@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 280px) and (max-width: 930px) {
+@media screen and (min-width: 280px) and (max-width: 500px) {
   .filterLabel,
   .filterSelect {
     font-size: 6vw;
@@ -57,5 +57,22 @@
     text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
       0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
     margin: -20%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .filterLabel,
+  .filterSelect {
+    font-size: 4vw;
+  }
+
+  .filterButton {
+    height: 20vh;
+    width: 40vw;
+    font-size: 3vw;
+    font-weight: 600;
+    text-shadow: -0.075rem 0.075rem 0 #ff00a7, 0.075rem 0.075rem 0 #ff00a7,
+      0.075rem -0.075rem 0 #ff00a7, -0.075rem -0.075rem 0 #ff00a7;
+    margin: -5%;
   }
 }
