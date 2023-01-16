@@ -15,8 +15,9 @@
 
 ## Runnnig the App
 
-1. Clone down this repo to your local machine
-<code>Clone</code>
+Clone down this repo to your local machine by running the following in your terminal: 
+
+1. <code>git clone git@github.com:daniabee/The-New-Mixologist.git</code>
 1. <code>npm install</code>
 1. <code>npm start</code>
 1. Runs the app in the development mode.\
