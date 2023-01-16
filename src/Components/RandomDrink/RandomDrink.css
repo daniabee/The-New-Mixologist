@@ -34,6 +34,7 @@
   color: white;
   text-decoration: none;
   margin: 1%;
+  border: none;
 }
 
 .randomButton:hover {
