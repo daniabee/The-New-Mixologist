@@ -105,4 +105,28 @@ describe("What's my drink", () => {
 
     cy.get(".back-button").click();
   });
+  it("User should be prompted to go back and complete test if they did not complete the quiz", () => {
+    cy.get("#1").click();
+    cy.get("#5").click();
+    cy.contains("GET DRINK!").click();
+    cy.contains(
+      "Please make sure you fill out the quiz completely before getting your drink!"
+    );
+  });
+  it("User should be told if there is an error getting their drink", () => {
+    cy.intercept(
+      "GET",
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee`,
+      { statusCode: 404 }
+    );
+    cy.get("#1").click();
+    cy.get("#5").click();
+    cy.get("#19").click();
+    cy.contains("GET DRINK!").click();
+    cy.contains("There was a problem getting your drink!");
+  });
+  it("User should be told to complete the quiz if they visit the result page manually", () => {
+    cy.visit("http://localhost:3000/result");
+    cy.contains("Complete the quiz to see your drink!");
+  });
 });
