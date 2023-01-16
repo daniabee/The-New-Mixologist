@@ -22,3 +22,5 @@ Clone down this repo to your local machine by running the following in your term
 1. <code>npm start</code>
 1. Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+You can also visit the deployed site at: https://the-new-mixologist.vercel.app/
