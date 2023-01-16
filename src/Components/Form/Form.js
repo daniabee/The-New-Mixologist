@@ -60,32 +60,56 @@ const Form = () => {
   };
 
   const setCocktailInfo = async () => {
+    // const drinks = await getCocktailInfo(state.question2);
+    // if (
+    //   drinks === "Error" &&
+    //   state.question1 != 0 &&
+    //   state.question2 != "" &&
+    //   state.question3 != 0
+    // ) {
+    //   const errorDrink = {
+    //     strDrink: "There was a problem getting your drink!",
+    //     strDrinkThumb: Logo,
+    //   };
+    //   dispatch({ type: "MY_DRINK", drink: errorDrink });
+    // } else if (
+    //   state.question1 === 0 ||
+    //   !state.question2 ||
+    //   state.question3 === 0
+    // ) {
+    //   const errorDrink = {
+    //     strDrink:
+    //       "Please make sure you fill out the quiz completely before getting your drink!",
+    //     strDrinkThumb: Logo,
+    //   };
+    //   dispatch({ type: "MY_DRINK", drink: errorDrink });
+    // } else {
+    //   const newDrink = pickDrink(drinks);
+    //   dispatch({ type: "MY_DRINK", drink: newDrink });
+    //   clearForm();
+    // }
+
     const drinks = await getCocktailInfo(state.question2);
-    if (
-      drinks === "Error" &&
-      state.question1 != 0 &&
-      state.question2 != "" &&
-      state.question3 != 0
-    ) {
-      const errorDrink = {
-        strDrink: "There was a problem getting your drink!",
-        strDrinkThumb: Logo,
-      };
-      dispatch({ type: "MY_DRINK", drink: errorDrink });
-    } else if (
-      state.question1 === 0 ||
-      !state.question2 ||
-      state.question3 === 0
-    ) {
+    if (state.question1 && state.question2 && state.question3) {
+      const drinks = await getCocktailInfo(state.question2);
+      if (drinks === "Error") {
+        const errorDrink = {
+          strDrink: "There was a problem getting your drink!",
+          strDrinkThumb: Logo,
+        };
+        dispatch({ type: "MY_DRINK", drink: errorDrink });
+      } else {
+        const newDrink = pickDrink(drinks);
+        dispatch({ type: "MY_DRINK", drink: newDrink });
+        clearForm();
+      }
+    } else if (!state.question1 || !state.question2 || !state.question3) {
       const errorDrink = {
         strDrink:
-          "There was a problem getting your drink! Please make sure you fill out the quiz completely!",
+          "Please make sure you fill out the quiz completely before getting your drink!",
         strDrinkThumb: Logo,
       };
       dispatch({ type: "MY_DRINK", drink: errorDrink });
-    } else {
-      const newDrink = pickDrink(drinks);
-      dispatch({ type: "MY_DRINK", drink: newDrink });
     }
   };
 
@@ -96,11 +120,6 @@ const Form = () => {
     dispatch({ type: "SELECTED_ONE", selected: 0 });
     dispatch({ type: "SELECTED_TWO", selected: 0 });
     dispatch({ type: "SELECTED_THREE", selected: 0 });
-  };
-
-  const submitForm = () => {
-    setCocktailInfo();
-    clearForm();
   };
 
   return (
@@ -345,11 +364,11 @@ const Form = () => {
       <Link
         to="/result"
         className="submit-button"
-        onClick={(event) => {
-          submitForm();
+        onClick={() => {
+          setCocktailInfo();
         }}
       >
-        SUBMIT
+        GET DRINK!
       </Link>
     </div>
   );

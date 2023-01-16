@@ -30,6 +30,7 @@ const initialState = {
   selected2: "",
   selected3: 0,
   error: false,
+  currentPage: "HOME",
 };
 
 const reducer = (state, action) => {
@@ -56,6 +57,8 @@ const reducer = (state, action) => {
       return { ...state, allDrinks: action.allDrinks };
     case "SET_ERROR":
       return { ...state, error: action.error };
+    case "CHANGE_PAGE":
+      return { ...state, currentPage: action.currentPage };
     default:
       return state;
   }

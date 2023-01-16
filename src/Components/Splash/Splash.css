@@ -8,7 +8,7 @@
 .title {
   height: auto;
   width: 100%;
-  animation: blink 0.25s;
+  animation: blink 0.3s;
   animation-iteration-count: 2;
 }
 
@@ -30,25 +30,25 @@
 
 @keyframes blink {
   0% {
-    opacity: 1;
+    filter: saturate(100%);
   }
   19% {
-    opacity: 1;
+    filter: saturate(0%);
   }
   20% {
-    opacity: 0;
+    filter: saturate(60%);
   }
   50% {
-    opacity: 0;
+    filter: saturate(0%);
   }
   49% {
-    opacity: 1;
+    filter: saturate(0%);
   }
   50% {
-    opacity: 0;
+    filter: saturate(60%);
   }
   100% {
-    opacity: 0;
+    filter: saturate(60%);
   }
 }
 

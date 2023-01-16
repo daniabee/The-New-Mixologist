@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: url("./Components/Assets/the-old-vintage-black-brick-wall-background-with-lighting-decoration-and-dark-tone-style-for-background-design-concept-free-photo.jpg");
   background-size: contain;
+  overflow-x: hidden;
 }
 
 code {
