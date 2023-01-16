@@ -15,8 +15,8 @@
 
 ## Runnnig the App
 
-In the project directory, you can run:
-
+1. Clone down this repo to your local machine
+<code>Clone</code>
 1. <code>npm install</code>
 1. <code>npm start</code>
 1. Runs the app in the development mode.\
