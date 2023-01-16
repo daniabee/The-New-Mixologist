@@ -4,6 +4,12 @@ describe("random page", () => {
     cy.get(".start-button").click();
     cy.get(".navBar").contains("RANDOM COCKTAIL").click();
   });
+  it("User should see the nav bar", () => {
+    cy.get(".navBar").contains("HOME");
+    cy.get(".navBar").contains("FILTER COCKTAILS");
+    cy.get(".navBar").contains("WHAT'S MY DRINK");
+    cy.get(".navBar").contains("RANDOM COCKTAIL");
+  });
   it("Should show a start icon and instructions", () => {
     cy.get("img").should(
       "have.attr",

@@ -6,6 +6,10 @@ describe("What's my drink", () => {
   });
   it("User should see the nav bar", () => {
     cy.get(".navBar").should("be.visible");
+    cy.get(".navBar").contains("HOME");
+    cy.get(".navBar").contains("FILTER COCKTAILS");
+    cy.get(".navBar").contains("WHAT'S MY DRINK");
+    cy.get(".navBar").contains("RANDOM COCKTAIL");
   });
   it("User should see an image title", () => {
     cy.get("img").should("have.attr", "alt", "Find Your Drink!");
@@ -125,8 +129,9 @@ describe("What's my drink", () => {
     cy.contains("GET DRINK!").click();
     cy.contains("There was a problem getting your drink!");
   });
-  it("User should be told to complete the quiz if they visit the result page manually", () => {
+  it("User should be told to complete the quiz if they visit the result page manually and be able to go back to quiz", () => {
     cy.visit("http://localhost:3000/result");
     cy.contains("Complete the quiz to see your drink!");
+    cy.get(".back-button").click();
   });
 });
