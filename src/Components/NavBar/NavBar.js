@@ -18,7 +18,9 @@ const NavBar = () => {
     <div className="navBar">
       <NavLink
         to="/"
-        className="navLink"
+        className={
+          state.currentPage === "HOME" ? "navLink currentPage" : "navLink"
+        }
         onClick={(event) => {
           changePage(event);
         }}
@@ -27,7 +29,11 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         to="/home"
-        className="navLink"
+        className={
+          state.currentPage === "FILTER COCKTAILS"
+            ? "navLink currentPage"
+            : "navLink"
+        }
         onClick={(event) => {
           changePage(event);
         }}
@@ -36,7 +42,11 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         to="/whats-my-drink"
-        className="navLink"
+        className={
+          state.currentPage === "WHAT'S MY DRINK?"
+            ? "navLink currentPage"
+            : "navLink"
+        }
         onClick={(event) => {
           changePage(event);
         }}
@@ -45,7 +55,11 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         to="/random-drink"
-        className="navLink"
+        className={
+          state.currentPage === "RANDOM COCKTAIL"
+            ? "navLink currentPage"
+            : "navLink"
+        }
         onClick={(event) => {
           changePage(event);
         }}
