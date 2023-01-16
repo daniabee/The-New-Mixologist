@@ -1,0 +1,13 @@
+.statusError {
+  font-size: 15vh;
+  text-shadow: -0.05rem 0.05rem 0 #ff00a7, 0.05rem 0.05rem 0 #ff00a7,
+    0.05rem -0.05rem 0 #ff00a7, -0.05rem -0.05rem 0 #ff00a7;
+  color: white;
+}
+
+.message {
+  font-size: 10vh;
+  text-shadow: -0.05rem 0.05rem 0 #ff00a7, 0.05rem 0.05rem 0 #ff00a7,
+    0.05rem -0.05rem 0 #ff00a7, -0.05rem -0.05rem 0 #ff00a7;
+  color: white;
+}
