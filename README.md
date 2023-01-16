@@ -1,6 +1,6 @@
 # New Mixologist
 
-##Learning Goals 
+## Learning Goals 
 
 - Demonstrate mastery of the following:
 1. React
