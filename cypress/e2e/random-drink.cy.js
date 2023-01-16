@@ -26,4 +26,13 @@ describe("random page", () => {
     );
     cy.contains("Test1");
   });
+  it("Should show a error message when network request fails", () => {
+    cy.intercept(
+      "GET",
+      "https://www.thecocktaildb.com/api/json/v1/1/random.php",
+      { statusCode: 404 }
+    );
+    cy.get(".randomButton").click();
+    cy.contains("There was a problem on our end!");
+  });
 });
