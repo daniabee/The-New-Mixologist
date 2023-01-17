@@ -52,6 +52,7 @@ To get New Mixologist running locally, follow these steps:
 * ![React Router][React Router]
 * ![Cyrpess](https://img.shields.io/badge/cypress-%1004E9F.svg?style=for-the-badge&logo=cypress&logoColor=%23F7DF1E)
 * ![Adobe Illustrator](https://img.shields.io/badge/adobe_illustrator-FF9A00.svg?style=for-the-badge&logo=adobe-illustrator&logoColor=black)
+* ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
 <!-- PROJECT PLANNING AND USER STORIES -->
 ## Project Planning and User Stories
@@ -68,6 +69,11 @@ Using Excalidraw and AdobeXD, I created a wireframe and data archatecture plan. 
 ## App Features
 
 https://user-images.githubusercontent.com/108088961/212791435-6ea75bba-6b5c-49b6-b1a6-2f9447b0032e.mp4
+
+## Final Reflections
+
+"This solo project really solidified my understanding of React, Router, Cypress testing, Global State context, and hooks. The project allowed me to gain more experience using functional components in React and seeing how global state impacts Router. I enjoyed the Cypress testing process and really felt comfortable intercepting/stubbing my tests for efficiency and testing for error handling in my app."
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
