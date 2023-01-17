@@ -43,7 +43,7 @@ To get New Mixologist running locally, follow these steps:
 - Style app to be responsive to screen sizes and mobile friendly
 - Deploy app using Vercel
 
-### Built With
+## Built With
 
 * ![CSS3][CSS3]
 * ![React][React.js]
