@@ -10,7 +10,8 @@
 <br />
 <!-- GETTING STARTED -->
 ## Getting Started
-To get New Mixologist running locally, follow these steps:
+Go to "https://the-new-mixologist.vercel.app/" **OR**
+to get New Mixologist running locally, follow these steps:
 
 1. Clone the repo
    ```sh
@@ -28,6 +29,8 @@ To get New Mixologist running locally, follow these steps:
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 6. You are now all set with running New Mixologist locally! 🎉
 
+**TO CHECK TESTING, YOU MUST BE RUNNING THE APP LOCALLY**
+
 <!-- LEARNING GOALS -->
 ## Learning Goals 
 
@@ -36,8 +39,7 @@ To get New Mixologist running locally, follow these steps:
   1. Router
   1. Asynchronous JavaScript
   1. End to end testing with Cypress
-  1. Create personas and user stories to describe your target audience.
-
+  
 - Implement global state management through React's UseContext so that state is maintained during routes.
 - Create tabable features for accessibility
 - Style app to be responsive to screen sizes and mobile friendly
@@ -72,7 +74,13 @@ https://user-images.githubusercontent.com/108088961/212791435-6ea75bba-6b5c-49b6
 
 ## Final Reflections
 
-"This solo project solidified my understanding of React, Router, Cypress testing, Global State context, and hooks. The project allowed me to gain more experience using React's functional components and see how the global state impacts routes. I enjoyed the Cypress testing process and felt comfortable intercepting/stubbing my tests for efficiency and error handling."
+This solo project solidified my understanding of React, Router, Cypress testing, Global State context, and hooks. The project allowed me to gain more experience using React's functional components and see how the global state impacts routes. I enjoyed the Cypress testing process and felt comfortable intercepting/stubbing my tests for efficiency and error handling. 
+
+Possible extensions for this app include:
+1. Create a details page for each cocktail for people to be able to see the specific ingredients in each drink after clicking a drink's thumbnail.
+2. Create more questions in the quiz to better guess a user's drink (i.e., more ingredients, able to select multiple ingredients, age, etc.)
+3. Create a favoriting/save feature for users to be able to see drinks they have tried and enjoy or want to try
+4. Create a more specific search feature for users to be able to filter by ingredients in adition to the current filter choices.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
