@@ -50,6 +50,7 @@ To get New Mixologist running locally, follow these steps:
 * ![HTML5][HTML5]
 * ![TypeScript][TypeScript]
 * ![React Router][React Router]
+* ![Cypress][Cypress]
 
 <!-- PROJECT PLANNING AND USER STORIES -->
 ## Project Planning and User Stories
@@ -69,11 +70,10 @@ https://user-images.githubusercontent.com/108088961/212791435-6ea75bba-6b5c-49b6
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Cloudflare]: https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white
-[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [CSS3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [React Router]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+
 
