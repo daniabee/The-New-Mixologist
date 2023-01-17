@@ -1,5 +1,27 @@
 # New Mixologist
+Visit the deployed site at: https://the-new-mixologist.vercel.app/
 
+<!-- GETTING STARTED -->
+## Getting Started
+To get New Mixologist running locally, follow these steps:
+
+1. Clone the repo
+   ```sh
+   git clone git@github.com:daniabee/The-New-Mixologist.git
+   ```
+3. cd into the file
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Start the app
+   ```sh
+   npm start
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6. You are now all set with running New Mixologist locally! 🎉
+
+<!-- LEARNING GOALS -->
 ## Learning Goals 
 
 - Demonstrate mastery of the following:
@@ -14,6 +36,7 @@
 - Style app to be responsive to screen sizes and mobile friendly
 - Deploy app using Vercel
 
+<!-- PROJECT PLANNING AND USER STORIES -->
 ## Project Planning and User Stories
 
 Using Excalidraw and AdobeXD, I created a wireframe and data archatecture plan. The MVP was to create an app for indecisive, inexperienced drinkers, that would give the user a drink a single drink suggestion they might enjoy based on a quiz/questionaire. 
@@ -28,16 +51,4 @@ Using Excalidraw and AdobeXD, I created a wireframe and data archatecture plan. 
 ## App Features
 
 https://user-images.githubusercontent.com/108088961/212791435-6ea75bba-6b5c-49b6-b1a6-2f9447b0032e.mp4
-
-## Runnnig the App
-
-Clone down this repo to your local machine by running the following in your terminal: 
-
-1. <code>git clone git@github.com:daniabee/The-New-Mixologist.git</code>
-1. <code>npm install</code>
-1. <code>npm start</code>
-1. Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-You can also visit the deployed site at: https://the-new-mixologist.vercel.app/
 
