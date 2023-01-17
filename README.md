@@ -52,7 +52,6 @@ To get New Mixologist running locally, follow these steps:
 * ![React Router][React Router]
 * ![Cyrpess](https://img.shields.io/badge/cypress-%1004E9F.svg?style=for-the-badge&logo=cypress&logoColor=%23F7DF1E)
 * ![Adobe Illustrator](https://img.shields.io/badge/adobe_illustrator-FF9A00.svg?style=for-the-badge&logo=adobe-illustrator&logoColor=black)
-* ![Adobe XD](https://img.shields.io/badge/Adobe%20XD&logo=Adobe%20XD&style=for-the-badge)
 
 <!-- PROJECT PLANNING AND USER STORIES -->
 ## Project Planning and User Stories
