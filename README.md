@@ -72,8 +72,7 @@ https://user-images.githubusercontent.com/108088961/212791435-6ea75bba-6b5c-49b6
 
 ## Final Reflections
 
-"This solo project really solidified my understanding of React, Router, Cypress testing, Global State context, and hooks. The project allowed me to gain more experience using functional components in React and seeing how global state impacts Router. I enjoyed the Cypress testing process and really felt comfortable intercepting/stubbing my tests for efficiency and testing for error handling in my app."
-
+"This solo project solidified my understanding of React, Router, Cypress testing, Global State context, and hooks. The project allowed me to gain more experience using React's functional components and see how the global state impacts routes. I enjoyed the Cypress testing process and felt comfortable intercepting/stubbing my tests for efficiency and error handling."
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
