@@ -27,7 +27,7 @@ Using Excalidraw and AdobeXD, I created a wireframe and data archatecture plan. 
 
 ## App Features
 
-https://user-images.githubusercontent.com/108088961/212790846-d15d6b7b-b534-42ac-8b16-faedc2de36c0.mp4
+https://user-images.githubusercontent.com/108088961/212791435-6ea75bba-6b5c-49b6-b1a6-2f9447b0032e.mp4
 
 ## Runnnig the App
 
