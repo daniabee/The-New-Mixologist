@@ -50,11 +50,9 @@ to get New Mixologist running locally, follow these steps:
 * ![CSS3][CSS3]
 * ![React][React.js]
 * ![HTML5][HTML5]
-* ![TypeScript][TypeScript]
 * ![React Router][React Router]
 * ![Cyrpess](https://img.shields.io/badge/cypress-%1004E9F.svg?style=for-the-badge&logo=cypress&logoColor=%23F7DF1E)
 * ![Adobe Illustrator](https://img.shields.io/badge/adobe_illustrator-FF9A00.svg?style=for-the-badge&logo=adobe-illustrator&logoColor=black)
-* ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
 <!-- PROJECT PLANNING AND USER STORIES -->
 ## Project Planning and User Stories
