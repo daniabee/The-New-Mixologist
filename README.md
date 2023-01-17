@@ -26,10 +26,9 @@ Using Excalidraw and AdobeXD, I created a wireframe and data archatecture plan. 
 ![Web 1920 – 4](https://user-images.githubusercontent.com/108088961/212788040-8d223f64-a4af-4f43-84a2-f63419702fe2.png)
 
 ## App Features
-<a href="https://www.loom.com/share/a857b26f4ae64629b60a5b94a1ad4576">
-    <p>Loom Message - 16 January 2023 - Watch Video</p>
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a857b26f4ae64629b60a5b94a1ad4576-1673919226406-with-play.gif">
-  </a>
+
+https://user-images.githubusercontent.com/108088961/212790846-d15d6b7b-b534-42ac-8b16-faedc2de36c0.mp4
+
 ## Runnnig the App
 
 Clone down this repo to your local machine by running the following in your terminal: 
