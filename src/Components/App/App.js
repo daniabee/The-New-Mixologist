@@ -7,7 +7,7 @@ import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
 import BadUrl from "../BadUrl/BadUrl";
-import Details from "../Details/Details"
+import Details from "../Details/Details";
 import { useReducer } from "react";
 import Logo from "../Assets/logo.png";
 import PropTypes, { string, shape, array, number } from "prop-types";
@@ -78,7 +78,7 @@ function App() {
           <Route exact path="/random-drink" element={<RandomDrink />} />
           <Route exact path="/result" element={<Result />} />
           <Route path="/*" element={<BadUrl />} />
-          <Route path="cocktails/:drink" element={< Details />} />
+          <Route path="/drinks/:id" element={<Details />} />
         </Routes>
       </div>
     </AppContext.Provider>
