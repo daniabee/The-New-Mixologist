@@ -34,7 +34,7 @@ const Search = () => {
           <option value="Cocktail">Cocktail</option>
         </select>
       </label>
-      <input className="filterButton" type="submit" value="Submit" />
+      <input className="filterButton" type="submit" value="Search" />
     </form>
   );
 };
