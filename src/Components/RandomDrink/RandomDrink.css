@@ -20,6 +20,11 @@
   margin: 2%;
 }
 
+.drinkImg:hover {
+  border: 0.02rem solid #ffffff;
+  box-shadow: 0 0 0.125rem #ffff, 0 0 0.75rem yellow;
+}
+
 .randomButton {
   display: flex;
   justify-content: center;

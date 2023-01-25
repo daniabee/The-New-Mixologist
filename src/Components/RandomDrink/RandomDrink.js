@@ -24,7 +24,7 @@ const RandomDrink = () => {
   };
 
   const details = (
-    <Link to={`/drinks/${state.randomDrink.idDrink}`} className="randomButton">
+    <Link to={`/drinks/${state.randomDrink.idDrink}`}>
       <img
         id={state.randomDrink.idDrink}
         className="drinkImg"
