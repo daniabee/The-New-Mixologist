@@ -7,6 +7,7 @@ import Quiz from "../Quiz/Quiz";
 import RandomDrink from "../RandomDrink/RandomDrink";
 import Result from "../Result/Result";
 import BadUrl from "../BadUrl/BadUrl";
+import Details from "../Details/Details";
 import { useReducer } from "react";
 import Logo from "../Assets/logo.png";
 import PropTypes, { string, shape, array, number } from "prop-types";
@@ -76,6 +77,7 @@ function App() {
           <Route exact path="/whats-my-drink" element={<Quiz />} />
           <Route exact path="/random-drink" element={<RandomDrink />} />
           <Route exact path="/result" element={<Result />} />
+          <Route path="/drinks/:id" element={<Details />} />
           <Route path="/*" element={<BadUrl />} />
         </Routes>
       </div>
