@@ -5,10 +5,12 @@ import "./Result.css";
 
 const Result = () => {
   const [state, dispatch] = useContext(AppContext);
+
   const option1 =
     "Please make sure you fill out the quiz completely before getting your drink!";
   const option2 = "Complete the quiz to see your drink!";
   const option3 = "There was a problem getting your drink!";
+
   const details = (
     <Link to={`/drinks/${state.myDrink.idDrink}`} className="back-button">
       DETAILS
