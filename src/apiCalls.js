@@ -45,7 +45,6 @@ export const getDetails = async (id) => {
     let URL = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
     const response = await fetch(URL);
     const drinkDetails = await response.json();
-    console.log(drinkDetails.drinks[0]);
     return drinkDetails.drinks[0];
   } catch {
     return "Error";

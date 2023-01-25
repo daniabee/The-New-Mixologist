@@ -15,7 +15,6 @@ const Details = () => {
 
   useEffect(() => {
     setDrinkDetails();
-    console.log("THIIIIIIS", details);
   }, []);
 
   return (

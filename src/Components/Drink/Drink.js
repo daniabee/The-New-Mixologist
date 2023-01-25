@@ -13,7 +13,6 @@ const Drink = ({ drink }) => {
           id={drink.idDrink}
           className="allDrinkImg"
           src={drink.strDrinkThumb}
-          // onClick={() => getDetails(drink.idDrink)}
         />
       </Link>
     </div>
