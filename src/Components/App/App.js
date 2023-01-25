@@ -77,8 +77,8 @@ function App() {
           <Route exact path="/whats-my-drink" element={<Quiz />} />
           <Route exact path="/random-drink" element={<RandomDrink />} />
           <Route exact path="/result" element={<Result />} />
-          <Route path="/*" element={<BadUrl />} />
           <Route path="/drinks/:id" element={<Details />} />
+          <Route path="/*" element={<BadUrl />} />
         </Routes>
       </div>
     </AppContext.Provider>

@@ -6,6 +6,31 @@
     0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
   color: white;
   text-decoration: none;
+  align-self: center;
+}
+
+.detailThumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detailsName {
+  font-weight: 600;
+  text-shadow: -0.01rem 0.01rem 0 #ff00a7, 0.01rem 0.01rem 0 #ff00a7,
+    0.01rem -0.01rem 0 #ff00a7, -0.01rem -0.01rem 0 #ff00a7;
+  color: white;
+  text-decoration: none;
+  font-size: 4vw;
+}
+
+.detailsImg {
+  height: auto;
+  width: 25%;
+  border: 0.02rem solid #ffffff;
+  box-shadow: 0 0 0.125rem #ffff, 0 0 0.75rem #ff00a6;
+  margin: 2%;
+  align-self: center;
 }
 
 .instructions {
