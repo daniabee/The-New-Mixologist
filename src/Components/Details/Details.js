@@ -13,7 +13,7 @@ const Details = () => {
     setDetails(drink);
   };
 
-  const ingredients = [
+  let ingredients = [
     details.strIngredient1,
     details.strIngredient2,
     details.strIngredient3,
@@ -29,7 +29,11 @@ const Details = () => {
     details.strIngredient13,
     details.strIngredient14,
     details.strIngredient15,
-  ].filter((ing) => ing != null);
+  ].filter((ing, index) => ing != null);
+
+  ingredients = ingredients.filter(
+    (ing, index) => ingredients.indexOf(ing) !== index
+  );
 
   const allIngredients = ingredients.map((item) => {
     return (
