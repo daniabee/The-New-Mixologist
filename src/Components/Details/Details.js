@@ -62,9 +62,11 @@ const Details = () => {
         <h3 className="drinkType">
           Type: {details.strAlcoholic} {details.strCategory}
         </h3>
-        <h3 className="instructions">
-          Instructions: {details.strInstructions}
-        </h3>
+        {details.strInstructions != "" ? (
+          <h3 className="instructions">
+            Instructions: {details.strInstructions}
+          </h3>
+        ) : null}
         <h3 className="instructions">Ingredients:</h3>
         {showIngredients}
       </div>

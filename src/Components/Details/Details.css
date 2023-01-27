@@ -42,3 +42,16 @@
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (min-width: 280px) and (max-width: 930px) {
+}
+
+@media screen and (min-width: 540px) and (max-width: 930px) {
+  .detailkName {
+    font-size: 6vw;
+  }
+  .detailImg {
+    height: auto;
+    width: 50vw;
+  }
+}
